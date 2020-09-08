@@ -1,0 +1,334 @@
+header.header{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+/*    border: 1px solid red;*/
+}
+img.logo{
+    width: 180px;
+    height: 90px;
+    float: left;
+    clear: both;
+    position: fixed;
+    top: 25px;
+    left: 70px;
+    opacity: 50%;
+    z-index: 999;
+}
+@keyframes taiwan{
+    0%{
+        opacity: 0;
+        transform: scale(1) translate(-50%,-30%);
+    }
+    1%{
+        opacity: 1;
+        transform: scale(1) translate(-50%,-30%);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0) translate(-50%,-30%);
+    }
+}
+img.taiwan{    
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-30%);
+    transform-origin: 0% 0%;
+    animation-name: taiwan;
+    animation-delay: 7.5s;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+/*    border: 1px solid black;*/
+}
+video.video{
+    width: 100%; 
+}
+nav.nav{
+/*    width: 400px;*/
+/*    height: 80px;*/
+/*    border: 1px solid black;*/
+    float: right;
+    clear: both;
+    position: fixed;
+    top: 35px;
+    right: 70px;
+    z-index: 2;
+}
+div.menu_border{
+    display: inline-block;
+    vertical-align: middle;
+/*    border: 1px solid green;*/
+    position: relative;
+    width: 550px;
+    height: 45px;
+    overflow: hidden;
+}
+ul.menu{
+/*    border: 1px solid blue;*/
+    position: absolute;
+    top:0;
+    left: 120%;
+    white-space: nowrap;
+}
+@keyframes move{
+    0%{
+        left: 120%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+ul.menu.move{
+    animation-name: move;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+ul.menu li{
+    display: inline-block;
+/*    border: 1px solid rgb(112,112,112);*/
+    background-color: rgba(0,0,0,0.30);
+    border-radius: 29px;
+    margin-right: 30px;
+    padding: 10px 7px;
+}
+ul.menu li a{
+    font-size: 20px;
+    color:white;
+    text-decoration: none;
+    list-style: none;
+}
+button.burger_border{
+    background-color: rgba(0,0,0,0);
+    border: 1px solid red;
+    border: 0;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+button.burger_border:focus{
+    outline: none;
+    border: 0;
+}
+button.burger_border span.line{
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 60px;
+    border-radius: 1.5px;
+    margin: 8px 5px;
+    box-shadow: 1px 1px 5px black;
+}
+
+
+/*index_1 increase css*/
+
+div.view_all{
+    width: 100%;
+    height: 100%;
+    background-image: url("../HTML/index_1/HO.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    opacity: 0.3;
+}
+div.view_green{
+    width: 80%;
+    height: 80%;
+    background-image: url("../HTML/index_1/taiwan_profile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%)
+}
+h1.view_all{
+    font-size: 120px;
+    font-family: 'TaipeiSansTCBeta-Light';
+    margin: 0;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-40%, 0%)
+}
+
+
+/*index_1_2 increase css*/
+
+div.view_point{
+    width: 100%;
+    height: 100%;
+    background-image: url("../HTML/index_1_2/waterfall.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    opacity: 0.5;
+    position: fixed;
+    z-index: -1;
+}
+h1.view_point{
+    font-size: 120px;
+    font-family: 'TaipeiSansTCBeta-Light';
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*index_2 increase css*/
+
+div.goup_all{
+    width: 100%;
+    height: 100%;
+    background-image: url("../HTML/index_2/group_all.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom 20%;  
+}
+h1.group_all_1{
+    font-size: 80px;
+    font-family: 'TaipeiSansTCBeta-Light';
+    margin: 0;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+}
+h1.group_all_2{
+    font-size: 80px;
+    font-family: 'TaipeiSansTCBeta-Light';
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    white-space:nowrap;
+}
+div.search_bar{
+    width: 330px;
+    height: 100px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+/*    border: 1px solid red;*/
+    transform: translate(-50%, 0%);
+}
+input.search_bar{
+    padding: 0;
+    width: 330px;
+    height: 60px;
+    border: 1px solid rgb(112,112,112);
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    font-size: 20px;
+    text-indent: 20px;
+}
+input.search_bar:focus{
+    outline: none;
+    border: 1px solid rgb(112,112,112);
+    border-radius: 30px;
+}
+button.search_btn{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: rgba(0,0,0,0);
+    transform: translate(0%, -50%);
+    cursor: pointer;
+}
+button.search_btn:visited{
+    border: none;
+    outline: none;
+}
+img.search_icon{
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+}
+#menu_border{
+    width: 650px;
+}
+
+/*index_2_1 increase css*/
+div.join_group{
+    width: 100%;
+    height: 100%;
+    background-image: url("../HTML/index_2_1/join_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    opacity: 0.5;
+    position: fixed;
+    z-index: -1; 
+}
+h1.join_group{
+    font-size: 120px;
+    font-family: 'TaipeiSansTCBeta-Light';
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*index_2_2 increase css*/
+div.create_group{
+    width: 100%;
+    height: 100%;
+    background-image: url("../HTML/index_2_2/create.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    opacity: 0.5;
+    position: fixed;
+    z-index: -1; 
+}
+h1.create_group{
+    font-size: 120px;
+    font-family: 'TaipeiSansTCBeta-Light';
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+/*index_3 increase css*/
+div.mountain_knowledge{
+    width: 100%;
+    height: 100%;
+    background-image: url("../HTML/index_3/mountain_knowledge.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: fixed;
+    z-index: -1;
+    filter: blur(10px);
+}
+h1.mountain_knowledge{
+    font-size: 120px;
+    font-family: 'TaipeiSansTCBeta-Light';
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

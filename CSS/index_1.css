@@ -1,0 +1,330 @@
+@import "./header.css";
+@import "./fonts.css";
+@import "./footer.css";
+body{
+    font-size: 0;
+    box-sizing: border-box;
+    font-family: 'TaipeiSansTCBeta-Regular';
+    position: relative;
+}
+h2,h4{
+    font-family: 'TaipeiSansTCBeta-Light';
+}
+div.h600_w150{
+    width: 150px; 
+    height: 400px;
+    border: 3px solid black;
+    border-left: none;
+    border-right: none;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+p.height_number{
+    margin: 0;
+    font-size: 36px;
+}
+p.h4000m{
+    position: absolute;
+    top: 0%;
+    right: -100%;
+    transform: translate(0%, -50%);
+}
+p.h3100m{
+    position: absolute;
+    bottom: 0%;
+    right: -100%;
+    transform: translate(0%, 50%);
+}
+div.height_same{
+    width: 82.5px;
+    height: 40px;
+    border: 3px solid black;
+    border-left: none;
+    border-right: none;
+    position: relative;
+}
+div.height_1{
+    border-top: none;
+}
+div.height_5{
+    border-bottom: none;
+}
+p.height_number_content{
+    margin: 0;
+    font-size: 30px;
+}
+p.h3900m{
+    position: absolute;
+    bottom: 0%;
+    right: -140%;
+    transform: translate(0%, 55%);
+}
+p.h3800m{
+    position: absolute;
+    top: 0%;
+    right: -140%;
+    transform: translate(0%, -55%);
+}
+p.h3700m{
+    position: absolute;
+    bottom: 0%;
+    right: -140%;
+    transform: translate(0%, 55%);
+}
+p.h3600m{
+    position: absolute;
+    top: 0%;
+    right: -140%;
+    transform: translate(0%, -55%);
+}
+p.h3500m{
+    position: absolute;
+    bottom: 0%;
+    right: -140%;
+    transform: translate(0%, 55%);
+}
+p.h3400m{
+    position: absolute;
+    top: 0%;
+    right: -140%;
+    transform: translate(0%, -55%);
+}
+p.h3300m{
+    position: absolute;
+    bottom: 0%;
+    right: -140%;
+    transform: translate(0%, 55%);
+}
+p.h3200m{
+    position: absolute;
+    top: 0%;
+    right: -140%;
+    transform: translate(0%, -55%);
+}
+span.height_line{
+    width: 400px;
+    height: 3px;
+    background-color: black;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+button.same{
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+button.u{
+    position: absolute;
+    top: 3%;
+}
+button.shue{
+    position: absolute;
+    top: 12%;
+}
+button.gh{
+    position: absolute;
+    top: 48%;
+}
+button.ho{
+    position: absolute;
+    top: 55%;
+}
+button.da{
+    position: absolute;
+    top: 62%;
+}
+
+/*總覽介紹 css*/
+/*玉山*/
+div.u_content_border{
+    width: 340px;
+    height: 300px;
+    display: inline-block;
+/*    display: none;*/
+/*    border: 1px solid black;*/
+    position: absolute;
+    top: 11%;
+    left: 58.6%;
+}
+div.same_content_bg{
+    width: 340px;
+    height: 200px;
+    background-color: rgba(112,112,112,0.5);
+    overflow: hidden;
+/*    border: 1px solid black;*/
+    border-radius: 20px;
+}
+p.u_content{
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0px 3px 6px black;
+    line-height: 25px;
+    padding: 15px 10px;
+}
+p.u_content::before{
+    content: "玉山主峰";
+    font-size: 36px;
+}
+p.u_name{
+    font-size: 36px;
+    color: blakc;
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 0%;
+}
+div.triangle{
+    border-top: 20px solid black;
+    border-left: 15px solid rgba(255,255,255,0);
+    border-right: 15px solid rgba(255,255,255,0);
+    position: absolute;
+    top: 90%;
+    left: 0%;
+}
+a.same_a{
+    text-decoration: none;
+    color: black;
+}
+a.same_a:visited{
+    color: black;
+}
+/*雪山*/
+div.shue_content_border{
+    width: 340px;
+    height: 300px;
+    display: inline-block;
+    display: none;
+/*    border: 1px solid black;*/
+    position: absolute;
+    top: 16%;
+    left: 49%;
+}
+p.shue_content{
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0px 3px 6px black;
+    line-height: 25px;
+    padding: 15px 10px;
+}
+p.shue_content::before{
+    content: "雪山東峰";
+    font-size: 36px;
+}
+p.shue_name{
+    font-size: 36px;
+    color: blakc;
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 0%;
+}
+/*奇萊主山*/
+div.gh_content_border{
+    width: 340px;
+    height: 300px;
+    display: inline-block;
+    display: none;
+/*    border: 1px solid black;*/
+    position: absolute;
+    top: 20%;
+    left: 44%;
+}
+p.gh_content{
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0px 3px 6px black;
+    line-height: 25px;
+    padding: 15px 10px;
+}
+p.gh_content::before{
+    content: "奇萊主山";
+    font-size: 36px;
+}
+p.gh_name{
+    font-size: 36px;
+    color: blakc;
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 0%;
+}
+/*合歡主峰*/
+div.ho_content_border{
+    width: 340px;
+    height: 300px;
+    display: inline-block;
+    display: none;
+/*    border: 1px solid black;*/
+    position: absolute;
+    top: 26%;
+    left: 37%;
+}
+p.ho_content{
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0px 3px 6px black;
+    line-height: 25px;
+    padding: 15px 10px;
+}
+p.ho_content::before{
+    content: "合歡主峰";
+    font-size: 36px;
+}
+p.ho_name{
+    font-size: 36px;
+    color: blakc;
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 0%;
+}
+/*大霸尖山*/
+div.da_content_border{
+    width: 340px;
+    height: 300px;
+    display: inline-block;
+/*    display: none;*/
+/*    border: 1px solid black;*/
+    position: absolute;
+    top: 28%;
+    left: 33%;
+}
+p.da_content{
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0px 3px 6px black;
+    line-height: 25px;
+    padding: 15px 10px;
+}
+p.da_content::before{
+    content: "大霸尖山";
+    font-size: 36px;
+}
+p.da_name{
+    font-size: 36px;
+    color: blakc;
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 0%;
+}
+*{
+/*    border: none !important;*/
+}

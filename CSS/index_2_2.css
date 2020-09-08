@@ -1,0 +1,450 @@
+@import "./header.css";
+@import "./fonts.css";
+@import "./footer.css";
+body{
+    font-size: 0;
+    box-sizing: border-box;
+    font-family: 'TaipeiSansTCBeta-Regular';
+    position: relative;
+}
+h2,h3,h4,h5{
+    font-family: 'TaipeiSansTCBeta-Light';
+}
+
+/*主框*/
+main.main{
+    width: 100%;
+/*    border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div.space_order{
+    width: 62.5%;
+    height: 30vh;
+/*    border: 1px solid blue;*/
+}
+div.create_border{
+    width: 62.5%;
+    min-width: 800px;
+    height: 70vh;
+/*    border: 1px solid red;*/
+    display: flex;
+    justify-content: space-between;
+}
+/*left_border*/
+div.left_border{
+    width: 37%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+/*left_top_border*/
+div.left_top_border{
+    margin-top: 7%;
+    width: 75%;
+    height: 23%;
+/*    border: 1px solid black;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.person_2{
+    width: 45%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button.upload_person_logo{
+    margin: 0;
+    padding: 10px 5px;;
+    font-size: 16px;
+    outline: none;
+    color: white;
+    border: 0;
+    border-radius: 15px;
+    background-color: rgb(160,160,160);
+}
+div.name_follow{
+    width: 50%;
+    height: 100%;
+/*    border: 1px solid red;*/
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+div.name_border{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+label.name{
+    font-size: 16px;
+}
+input.name_name{
+    width: 60%;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 7px;
+}
+div.separate{
+    display: flex;
+    justify-content: space-between;
+}
+/*left_middle_border*/
+div.left_middle_border{
+    width: 75%;
+    height: 45%;
+    border: 1px solid rgb(112,112,112);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button.upload_picture{
+    margin: 0;
+    padding: 10px 15px;;
+    font-size: 16px;
+    outline: none;
+    color: white;
+    border: 0;
+    border-radius: 15px;
+    background-color: rgb(160,160,160);
+}
+/*left_bottom_border*/
+div.left_bottom_border{
+    margin-bottom: 7%;
+    width: 75%;
+    height: 11%;
+    border: 1px solid rgb(112,112,112);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+div.bottom_picture_same{
+    width: 24%;
+    height: 100%;
+    outline: 1px solid rgb(112,112,112);
+/*    border: 1px solid rgb(112,112,112); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button.upload_picture_little{
+    margin: 0;
+    padding: 10px 10px;;
+    font-size: 16px;
+    outline: none;
+    color: white;
+    border: 0;
+    border-radius: 15px;
+    background-color: rgb(160,160,160);
+}
+/*right_border*/
+div.right_border{
+    width: 58%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*right_top_border*/
+div.right_top_border{
+    display: flex;
+    width: 100%;
+    height: 55%;
+    background-color: white;
+}
+/*right_top_left_border*/
+div.right_top_left_border{
+    width: 50%;
+/*    border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+div.same_font_border{
+    display: flex;
+    align-items: center;
+/*    border: 1px solid black;*/
+}
+div.fat_same_font_border{
+    display: flex;
+    align-items: flex-start;
+}
+label.same_font{
+    font-size: 24px;
+    margin: 0;
+    margin-left: 5%;
+    margin-right: 1%;
+/*    border: 1px solid red;*/
+}
+input.content{
+    width: 50%;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+}
+input.fat_content{
+    height: 70px;
+}
+/* div.create_cancel{
+    
+} */
+
+button.create{
+    margin-left: 10%;
+    margin-bottom: 5%;
+    font-size: 24px;
+    width: 40%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    background-color: white;
+}
+button.cancel{
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-size: 24px;
+    width: 40%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    background-color: white;
+}
+
+/*right_top_right_border*/
+div.right_top_right_border{
+    width: 50%;
+/*    border: 1px solid blue;*/
+}
+iframe.map{
+    width: 100%;
+    height: 100%;
+}
+/*right_bottom_border*/
+div.right_bottom_border{
+    width: 100%;
+    height: 35%;
+    background-color: white;
+}
+div.right_bottom_top_border{
+    width: 100%;
+    height: 20%;
+/*    border: 1px solid blue;*/
+    display: flex;
+}
+div.same_right_bottom_top_title{
+    width: 18%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.introduce{
+    background-color: rgb(238,238,238);
+}
+div.basic{
+    background-color: rgb(225,225,225);
+}
+div.traffic{
+    background-color: rgb(203,203,203);
+}
+p.same_font_bottom_title{
+    font-size: 20px;
+    margin: 0;
+}
+div.right_bottom_bottom_border{
+    width: 100%;
+    height: 80%;
+/*    border: 1px solid red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+textarea.introduce_content{
+    font-size: 16px;
+    border-radius: 10px;
+}
+/*conversation_border*/
+div.conversation_border{
+    width: 62.5%;
+    height: 85vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+/*conversation_left_border*/
+div.conversation_left_border{
+    width: 37%;
+    height: 100%;
+/*    border: 1px solid red;*/
+}
+/*conversation_right_border*/
+div.conversation_right_border{
+    width: 58%;
+    height: 100%;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+h5.conversation_right_border{
+    font-size: 24px;
+    margin: 0;
+    border: 1px solid brown;
+    margin-left: 5%;
+    padding: 10px 0px;
+}
+/*conversation_middle_border */
+div.conversation_middle_border{
+    width:95%;
+    margin-left: 5%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+div.conversation_create{
+    width: 100%;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+div.same_person_border{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+div.person_1_conversation{
+    background-image: url("../HTML/index_2_1/2p.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+div.right_conversation_create{
+    width: 80%;
+    border: 1px solid green;
+    margin-top: 10px;
+}
+div.name_score{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+p.name_coversation{
+    margin: 0;
+    font-size: 24px;
+}
+span.score{
+    margin: 0;
+    margin-right: 5%;
+    font-size: 20px;
+}
+p.date_font{
+    margin: 0;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+input.conversation_content{
+    width: 95%;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+button.announce{
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    font-size: 20px;
+    outline: none;
+    background-color: white;
+}
+/*紀*/
+div.conversation_gi{
+    width: 100%;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+div.person_2_conversation{
+    background-image: url("../HTML/index_2_1/1p.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+div.conversation_content{
+    width: 95%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+p.same_thrree_content{
+    margin: 0;
+    margin-left: 1%;
+    font-size: 16px;
+}
+/*何*/
+div.conversation_ho{
+    width: 100%;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+div.person_3_conversation{
+    background-image: url("../HTML/index_2_1/6p.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*黃*/
+div.conversation_hwong{
+    width: 100%;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+div.person_4_conversation{
+    background-image: url("../HTML/index_2_1/4p.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*more*/
+button.more{
+    margin: 0;
+    margin: 1%;
+    width: 20%;
+    font-size: 20px;
+    align-self: center;
+    background-color: white;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+/* *{
+ border: none !important;
+} */

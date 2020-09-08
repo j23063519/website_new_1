@@ -1,0 +1,377 @@
+@import "./header.css";
+@import "./fonts.css";
+@import "./footer.css";
+body{
+    font-size: 0;
+    box-sizing: border-box;
+    font-family: 'TaipeiSansTCBeta-Regular';
+}
+h2,h4{
+    font-family: 'TaipeiSansTCBeta-Light';
+}
+
+/*主框*/
+main.main{
+    width: 100%;
+/*    border: 1px solid red;*/
+    display: flex;
+    justify-content: center;
+}
+div.conversation_border{
+    width: 1200px;
+/*    border: 1px solid black;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*日期*/
+div.mon0817{
+    width: 150px;
+    background-color: rgb(248,248,248);
+    border-radius: 50px;
+    margin-bottom: 100px;
+}
+p.mon0817{
+    margin: 0;
+    padding: 15px 0px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+/*內容*/
+div.green{
+    background-color: rgb(195,246,157);
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px black;
+    position: relative;
+    align-self: flex-end;
+    margin-bottom: 100px;
+}
+p.same_font{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: black;
+}
+p.right_1{
+    padding: 15px 15px 35px 15px;
+}
+div.right_triangle{
+    border-top: 15px solid rgba(0,0,0,0);
+    border-bottom: 15px solid rgba(0,0,0,0);
+    border-left: 20px solid rgb(195,246,157);
+    position: absolute;
+    top: 10px;
+    right: -10px;
+}
+/*left_1*/
+div.gray{
+    background-color: rgb(239,239,239);
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px black;
+    position: relative;
+    align-self: flex-start;
+    margin-bottom: 100px;
+}
+p.left_1{
+    padding: 15px 35px 35px 15px;
+}
+div.left_triangle{
+    border-top: 15px solid rgba(0,0,0,0);
+    border-bottom: 15px solid rgba(0,0,0,0);
+    border-right: 20px solid rgb(239,239,239);
+    position: absolute;
+    top: 10px;
+    left: -10px;
+}
+div.same_person_boder{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    left: -90px;
+}
+div.person_1{
+    background-image: url("../HTML/index_1_2/1p.JPG");
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+/*left_2*/
+p.left_2{
+    padding: 15px 35px 10px 15px;
+}
+p.left_2_1{
+    padding: 0px 35px 15px 15px;
+}
+div.person_2{
+    background-image: url("../HTML/index_1_2/3p.JPG");
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+/*right_2*/
+p.right_2{
+    width: 260px;
+    padding: 15px 15px 25px 15px;
+    line-height: 35px;
+}
+/*right_3*/
+div.right_3{
+    display: flex;
+    flex-direction: column;
+}
+div.enentrance_border{
+    display: flex;
+}
+div.entrance_1{
+    width: 500px;
+    height: 300px;
+    background-image: url("../HTML/index_1_2/entrance1.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin: 15px;
+}
+div.entrance_2{
+    width: 500px;
+    height: 300px;
+    background-image: url("../HTML/index_1_2/entrance.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin: 15px;
+}
+p.right_3{
+    padding: 15px 15px 25px 15px;
+}
+/*left_3*/
+p.left_3{
+    padding: 15px 35px 35px 15px;
+}
+/*left_4*/
+p.left_4{
+    padding: 15px 35px 35px 15px;
+}
+/*right_4*/
+p.right_4{
+    padding: 10px 15px 5px 15px;
+}
+p.right_4_1{
+    padding: 10px 15px 25px 15px;
+}
+/*left_5*/
+p.left_5{
+    padding: 15px 35px 35px 15px;
+}
+/*right_5*/
+div.right_5{
+    width: 200px;
+    line-height: 35px;
+}
+p.right_5{
+    padding: 15px 15px 25px 15px;
+}
+/*left_6*/
+p.left_6{
+    padding: 15px 35px 35px 15px;
+}
+/*left_7*/
+p.left_7{
+    padding: 15px 35px 35px 15px;
+}
+/*right_6*/
+div.view_beautiful{
+    width: 500px;
+    height: 300px;
+    background-image: url("../HTML/index_1_2/view_beautiful.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin: 15px;
+}
+p.right_6{
+    padding: 15px 15px 25px 15px;
+}
+/*left_8*/
+p.left_8{
+    padding: 15px 15px 25px 15px;
+}
+/*left_9*/
+div.left_9{
+    width: 200px;
+}
+p.left_9{
+    padding: 15px 15px 25px 15px;
+    line-height: 35px;
+}
+/*right_7*/
+div.right_7{
+    display: flex;
+    flex-direction: column;
+}
+div.maya_border{
+    display: flex;
+}
+div.maya_1{
+    width: 500px;
+    height: 300px;
+    background-image: url("../HTML/index_1_2/go_hiking.jpg");
+    background-size: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    margin: 15px;
+}
+div.maya_2{
+    width: 500px;
+    height: 300px;
+    background-image: url("../HTML/index_1_2/maya.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin: 15px;
+}
+p.right_7{
+    padding: 15px 15px 25px 15px;
+}
+/*left_10*/
+div.left_10{
+    width: 200px;
+}
+p.left_10{
+    padding: 15px 15px 25px 15px;
+}
+/*left_11*/
+div.left_11{
+    width: 200px;
+}
+p.left_11{
+    padding: 15px 15px 25px 15px;
+}
+/*left_12*/
+div.left_12{
+    width: 200px;
+}
+p.left_12{
+    padding: 15px 15px 25px 15px;
+}
+/*right_8*/
+div.right_8{
+    display: flex;
+    flex-direction: column;
+    width: 1060px;
+}
+div.bath_border{
+    display: flex;
+}
+div.bath_1{
+    width: 500px;
+    height: 300px;
+    background-image: url("../HTML/index_1_2/bath_1.jpg");
+    background-size: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    margin: 15px;
+}
+div.bath_2{
+    width: 500px;
+    height: 300px;
+    background-image: url("../HTML/index_1_2/bath_2.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin: 15px;
+}
+p.right_8{
+    padding: 15px 15px 25px 15px;
+    line-height: 35px;
+}
+/*left_13*/
+div.left_13{
+    width: 200px;
+}
+p.left_13{
+    padding: 15px 15px 25px 15px;
+}
+/*right_9*/
+div.right_9{
+    display: flex;
+    flex-direction: column;
+}
+div.castle_border{
+    display: flex;
+}
+div.castle_1{
+    width: 500px;
+    height: 300px;
+    background-image: url("../HTML/index_1_2/bath_1.jpg");
+    background-size: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    margin: 15px;
+}
+div.castle_2{
+    width: 500px;
+    height: 300px;
+    background-image: url("../HTML/index_1_2/bath_2.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin: 15px;
+}
+p.right_9{
+    padding: 15px 15px 25px 15px;
+    line-height: 35px;
+}
+/*left_14*/
+div.left_14{
+    width: 200px;
+}
+p.left_14{
+    padding: 15px 15px 25px 15px;
+}
+/*right_10*/
+div.right_10{
+    width: 200px;
+    line-height: 35px;
+}
+p.right_10{
+    padding: 15px 15px 25px 15px;
+}
+/*right_11*/
+div.right_11{
+    display: flex;
+    flex-direction: column;
+}
+div.top_border{
+    display: flex;
+}
+div.top_1{
+    width: 500px;
+    height: 300px;
+    background-image: url("../HTML/index_1_2/top_1.jpg");
+    background-size: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    margin: 15px;
+}
+div.top_2{
+    width: 500px;
+    height: 300px;
+    background-image: url("../HTML/index_1_2/top_2.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin: 15px;
+}
+p.right_11{
+    padding: 15px 15px 25px 15px;
+    line-height: 35px;
+}
+*{
+/*    border: none !important;*/
+}

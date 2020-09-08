@@ -1,0 +1,12 @@
+@font-face{
+    font-family: "TaipeiSansTCBeta-Regular";
+    src: url("../font/TaipeiSansTCBeta-Regular.ttf");
+}
+@font-face{
+    font-family: "TaipeiSansTCBeta-Light";
+    src: url("../font/TaipeiSansTCBeta-Light.ttf");
+}
+@font-face{
+    font-family: "TaipeiSansTCBeta-Bold";
+    src: url("../font/TaipeiSansTCBeta-Bold.ttf");
+}

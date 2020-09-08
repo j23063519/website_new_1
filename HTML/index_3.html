@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登山須知</title>
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="stylesheet" href="../CSS/index_3.css">
+    <link rel="icon" type="image/png" href="./index/logo.png">
+    <!-- font_awesome   -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="mountain_knowledge"></div>
+        <h1 class="mountain_knowledge">登山須知</h1>
+        <a href="index.html"><img class="logo" src="./index/logo.png"></a>
+        <nav class="nav">
+            <div class="menu_border">
+                <ul class="menu">
+                    <li><a href="index_1.html" target="_blank">登山總覽</a></li>
+                    <li><a href="index_2.html" target="_blank">山友揪團</a></li>
+                    <li><a href="index_3.html" target="_blank">登山須知</a></li>
+                    <li><a href="index_4.html" target="_blank">登入/註冊</a></li>
+                </ul>
+            </div>
+            <button type="button" class="burger_border">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="mountain_knowledge_border">
+            <div class="mountain_knowledge_two">
+                <div class="test_white">
+                    <div class="black_round"></div>
+                    <p class="knowledge_content">
+                        當我想上廁所時，需要跟其他同伴告知嗎???會不會給其他人造成麻煩呢?
+                    </p>
+                </div>
+                <div class="test_white">
+                    <div class="black_round"></div>
+                    <p class="knowledge_content">
+                        發生意外時，一定要鎮靜處理，切忌不可慌亂失措，並立即撥打幾號電話??請求協助。
+                    </p>
+                </div>
+            </div>
+            <div class="mountain_knowledge_two">
+                <div class="test_white">
+                    <div class="black_round"></div>
+                    <p class="knowledge_content">
+                        登山過程中若有捷徑，該不該去走呢??
+                    </p>
+                </div>
+                <div class="test_white">
+                    <div class="black_round"></div>
+                    <p class="knowledge_content">
+                        上山前若發現身體微微不適，是否要繼續堅持爬山呢??
+                    </p>
+                </div>
+            </div>
+            <div class="mountain_knowledge_two">
+                <div class="test_white">
+                    <div class="black_round"></div>
+                    <p class="knowledge_content">
+                        登山健行前自己都會做好是對的嗎??會不會太慎重??
+                    </p>
+                </div>
+                <div class="test_white">
+                    <div class="black_round"></div>
+                    <p class="knowledge_content">
+                        登山健行前需要跟家人告知嗎??會不會太多此一舉??
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="mountain_equipment_big_border">
+            <h3 class="mountain_equipment">登山配備</h3>
+            <div class="mountain_equipment_border">
+                <div class="equipment_border">
+                    <div class="equipment_bg hat"></div>
+                    <p class="equipment_title">帽子</p>
+                </div>
+                <div class="equipment_border">
+                    <div class="equipment_bg cloth"></div>
+                    <p class="equipment_title">衣服</p>
+                </div>
+                <div class="equipment_border">
+                    <div class="equipment_bg pant"></div>
+                    <p class="equipment_title">褲子</p>
+                </div>
+            </div>
+            <div class="mountain_equipment_border">
+                <div class="equipment_border">
+                    <div class="equipment_bg coat"></div>
+                    <p class="equipment_title">外套</p>
+                </div>
+                <div class="equipment_border">
+                    <div class="equipment_bg sock"></div>
+                    <p class="equipment_title">襪子</p>
+                </div>
+                <div class="equipment_border">
+                    <div class="equipment_bg shoes"></div>
+                    <p class="equipment_title">鞋子</p>
+                </div>
+            </div>
+            <div class="mountain_equipment_border">
+                <div class="equipment_border">
+                    <div class="equipment_bg Trekking_poles"></div>
+                    <p class="equipment_title">登山杖</p>
+                </div>
+                <div class="equipment_border">
+                    <div class="equipment_bg backpack"></div>
+                    <p class="equipment_title">登山背包</p>
+                </div>
+                <div class="equipment_border">
+                    <div class="equipment_bg raincoat"></div>
+                    <p class="equipment_title">雨衣</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <a href="#header" class="go_top">
+            <span class="progress_bar"></span>
+            <p class="go_top">回到頂點</p>
+        </a>
+        <p class="mail">信箱:tibame@gmail.com</p>
+        <div class="fbtw_border">
+            <a href="https://zh-tw.facebook.com/" target="_blank"><img class="fb" src="../HTML/index/fb_fb.png"></a>
+            <a href="https://twitter.com/?lang=zh-tw" target="_blank"><img class="tw"
+                    src="../HTML/index/twitter.png"></a>
+        </div>
+        <p class="copyright">Copyright © All rights reserved</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            // 「觸發」按鈕點擊
+            $("button.burger_border").on("click", function () {
+
+                // move 樣式的切換(點擊一次加上 move 樣式，再點擊則移除)
+                $("ul.menu").toggleClass("move");
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

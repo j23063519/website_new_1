@@ -1,0 +1,386 @@
+@import "./header.css";
+@import "./fonts.css";
+@import "./footer.css";
+body{
+    font-size: 0;
+    box-sizing: border-box;
+    font-family: 'TaipeiSansTCBeta-Regular';
+}
+h2,h4{
+    font-family: 'TaipeiSansTCBeta-Light';
+}
+main.main{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+main.main div.full_width{
+    width:100%;
+    height: 100vh;
+    margin-top: 100px;
+    border: 1px solid gray; 
+}
+main.main div.about_border{
+    display: flex;
+}
+main.main div.about_border div.about{
+    width: 50%;
+    height: 100%;
+    border: 1px solid red;
+    background-image: url("../HTML/index/about_bottom.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 70%;
+    display: flex;
+}
+main.main div.about_border div.about div.about_left{
+    width: 36%;
+    height 100%;
+    border: 1px solid purple; 
+}
+main.main div.about_border div.about div.about_content{
+    width: 56%;
+    height 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+main.main div.about_border div.about div.about_right{
+    width: 8%;
+    height 100%;
+    border: 1px solid brown; 
+}
+main.main div.about_border div.about_picture{
+    width: 50%;
+    height: 100%;
+    background-image: url("../HTML/index/about_picture.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main.main div.about div.about_content{
+/*    display: flex;*/
+}
+h2.content_title_80{
+    font-size: 80px;
+    color: rgb(112,112,112);
+    margin: 0;
+    margin-bottom: 20px;
+}
+h4.content_title_40_1{
+    font-size: 40px;
+    color: rgb(112,112,112);
+    margin: 0;
+    margin-bottom: 20px;
+}
+p.content_1{
+    font-size: 20px;
+    color: rgb(112,112,112);
+    margin: 0;
+    text-indent: 40px;
+    line-height: 20px;
+}
+p.content_2{
+    font-size: 20px;
+    color: rgb(112,112,112);
+    margin: 0;
+    margin-bottom: 20px;
+    text-indent: 40px; 
+    line-height: 25px;
+}
+h4.content_title_40_2{
+    font-size: 40px;
+    color: rgb(112,112,112);
+    margin: 0;
+    margin-bottom: 20px;
+}
+p.content_3{
+    font-size: 20px;
+    color: rgb(112,112,112);
+    margin: 0;
+    line-height: 25px;
+}
+p.content_4{
+    font-size: 20px;
+    color: rgb(112,112,112);
+    margin: 0;
+    line-height: 20px;
+}
+p.content_5{
+    font-size: 20px;
+    color: rgb(112,112,112);
+    margin: 0;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+p.content_6{
+    font-size: 20px;
+    color: rgb(112,112,112);
+    margin: 0;
+    text-indent: 40px;
+    line-height: 25px;
+}
+div.introduce{
+    display: flex;
+    
+}
+div.introduce_group{
+    width: 33.33%;
+    height: 100%;
+    border: 1px solid red;
+}
+div.introduce_life{
+    width: 33.34%;
+    height: 100%;
+    border: 1px solid blue;
+}
+div.introduce_nature{
+    width: 33.33%;
+    height: 100%;
+    border: 1px solid green;
+}
+div.intrdouce_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+h2.introduce_same{
+    font-size: 80px;
+    color: rgb(112,112,112);
+    border: 1px solid brown;
+    text-align: center;
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+div.introduce_picture{
+    max-width: 100%;
+    height: 75%;
+    border: 1px solid green;
+}
+div.introduce_group_picture{
+    background-image: url("../HTML/index/group.jpg");
+    background-size:cover;
+    background-position: center;
+}
+div.introduce_life_picture{
+    background-image: url("../HTML/index/life.jpg");
+    background-size:cover;
+    background-position: center;
+}
+div.introduce_nature_picture{
+    background-image: url("../HTML/index/nature.JPG");
+    background-size:cover;
+    background-position: center;
+}
+div.content_border{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(112,112,112,0.5);
+    justify-content: center;
+    align-items: center;
+}
+p.introduce_content_same{
+    width: 65%;
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    text-indent: 40px;
+    line-height: 35px;
+}
+p.group_content::before{
+    content: "第一次爬山是認";
+    font-size: 40px;
+}
+p.life_content::before{
+    content: "登山不僅僅是一";
+    font-size: 40px;
+}
+p.nature_content::before{
+    content: "登山不僅是一項";
+    font-size: 40px;
+}
+
+/*合歡山大照片*/
+div.mountain{
+    position: relative;
+}
+a.index_1{
+    text-decoration: none; 
+    color: black;
+}
+a.index_1:visited{
+    color: black;
+}
+div.mountain_bg{
+    width: 100%;
+    height: 100%;
+    background-image: url("../HTML/index/mountain.jpg");
+    background-size:cover;
+    background-position: center;
+    opacity: 0.15;
+}
+div.mountain_center{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    width: 62.5%; /* 1200除以1920*/
+    height: 65%;
+    border: 1px solid red;
+    background-image: url("../HTML/index/mountain_cover.jpg");
+    background-size: cover;
+    background-position: center;
+}
+h2.mountain_name{
+    font-size: 80px;
+    color: rgb(112,112,112);
+    margin: 0;
+    position: absolute;
+    top: -30%;
+    left: 0%;
+}
+
+/*景點介紹*/
+div.view_border{
+    position: relative;
+}
+div.view_border_center{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    width: 62.5%; /* 1200除以1920*/
+    height: 65%;
+    border: 1px solid red;
+    background-image: url("../HTML/index/view.jpg");
+    background-size: cover;
+    background-position: center;
+}
+h2.view_title{
+    font-size: 80px;
+    color: rgb(112,112,112);
+    margin: 0;
+    position: absolute;
+    top: -30%;
+    left: 0%;
+}
+div.view_name_bg{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 38%;
+    height: 45%;
+    background-color: rgba(255,255,255,0.40);
+    overflow: hidden;
+}
+h4.view_name{
+    font-size: 40px;
+    color: rgb(112,112,112);
+    margin: 0;
+    margin-bottom: 15px;
+}
+p.view_content{
+    margin: 0;
+    font-size: 20px;
+    color: rgb(112,112,112);
+    text-indent: 40px;
+    line-height: 30px;
+    padding: 0px 5px;
+}
+div.video{
+    position: relative;
+}
+div.video_border{
+    display: flex;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    width: 62.5%; /* 1200除以1920*/
+    height: 65%;
+    border: 1px solid red;
+}
+h2.video_title{
+    font-size: 80px;
+    color: rgb(112,112,112);
+    margin: 0;
+    position: absolute;
+    top: -30%;
+    left: 0%;
+}
+div.video_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    height: 100%;
+    border: 1px solid blue;
+}
+div.video_play{
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+}
+h4.video_border_name{
+    font-size: 35px;
+    color: rgb(255,255,255);
+    width: 85%;
+    margin: 0;
+    padding: 5px 0px;
+    background-color: rgba(0,0,0,0.2);
+    border: 1px solid red;
+    text-align: center;
+    border-radius: 30px;
+}
+div.author{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.author_border{
+    width: 62.5%; /* 1200除以1920*/
+    height: 75%;
+    display: flex;
+    justify-content:space-between ;
+    border: 1px solid red;
+}
+div.author_picture{
+    width: 50%;
+    height: 100%;
+    background-image: url("../HTML/index/LIN.JPG");
+    background-size: cover;
+    background-position: center;
+}
+div.author_introduce{
+    width: 47%;
+    height: 100%;
+    border: 1px solid blue;
+}
+h2.author_introduce{
+    margin: 0;
+    font-size: 80px;
+    color: rgb(112,112,112);
+    margin-bottom: 15px;
+}
+h4.author_name{
+    margin: 0;
+    font-size: 40px;
+    color: rgb(112,112,112);
+    margin-bottom: 15px;
+}
+p.author_content_same{
+    margin: 0;
+    font-size: 20px;
+    color: rgb(112,112,112);
+    margin-bottom: 10px;
+}
+p.author_content{
+    text-indent: 40px;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+*{
+    border: none !important;
+}
