@@ -1,6 +1,10 @@
 @import "./header.css";
 @import "./fonts.css";
 @import "./footer.css";
+@import "./RWD_header.css";
+*,*::after,*::after {
+    box-sizing: border-box !important;
+}
 body{
     font-size: 0;
     box-sizing: border-box;
@@ -26,13 +30,15 @@ div.mountain_knowledge_border{
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-/*    border: 1px solid white;*/
+    overflow: hidden;
+    /* border: 1px solid white; */
 }
 div.mountain_knowledge_two{
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 100px;
+    /* border: 1px solid red; */
 }
 div.test_white{
     width: 330px;
@@ -68,11 +74,11 @@ div.mountain_equipment_big_border{
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-/*    border: 1px solid white;*/
+    /* border: 1px solid white; */
 }
 h3.mountain_equipment{
     margin: 0;
-    font-size: 60px;
+    font-size: 7vw;
     color: white;
     text-shadow: 0px 3px 6px black;
     text-align: center;
@@ -80,12 +86,14 @@ h3.mountain_equipment{
 }
 div.mountain_equipment_border{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 100px;
 }
 div.equipment_border{
     width: 300px;
     height: 400px;
+    margin-bottom: 100px;
+    margin-right: 1%;
     border: 1px solid black;
     background-color: white;
     display: flex;
@@ -167,3 +175,144 @@ div.raincoat{
 /* *{
     border: none !important;
 } */
+
+/* header */
+
+@media screen and (min-width:1200px){
+    header.header{
+        min-height: 680px;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width:1199px){
+    header.header{
+        min-height: 680px;
+    }
+}
+@media screen and (max-width:1000px){
+    header.header{
+        min-height: 580px;
+    }
+}
+@media screen and (max-width:800px){
+    header.header{
+        min-height: 480px;
+    }
+    h1.mountain_knowledge{
+        font-size: 8vw;
+    }
+    h3.mountain_equipment{
+        font-size: 7vw;
+    }
+}
+@media screen and (max-width:600px){
+    header.header{
+        min-height: 380px;
+    }
+}
+@media screen and (max-width:450px){
+    header.header{
+        min-height: 300px;
+    }
+    h1.mountain_knowledge{
+        font-size: 10vw;
+    }
+    h3.mountain_equipment{
+        font-size: 9vw;
+    }
+}
+
+/* mountain_knowledge_border */
+@media screen and (max-width:1235px){
+    div.mountain_knowledge_border{
+        width: 1000px;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width:1035px){
+    div.mountain_knowledge_border{
+        width: 800px;
+    }
+}
+@media screen and (max-width:835px){
+    div.mountain_knowledge_border{
+        width: 600px;
+        margin-top: 0%;
+    }
+    div.mountain_knowledge_two{
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: stretch;
+        margin-bottom: 0;
+        transition: 0.5s;
+    }
+    div.test_white{
+        margin-bottom: 10%;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width:635px){
+    div.mountain_knowledge_border{
+        width: 400px;
+    }
+}
+@media screen and (max-width:450px){
+    div.mountain_knowledge_border{
+        width: 100%;
+    }
+    div.test_white{
+        width: 300px;
+        height: 300px;
+        transition: 0.5s;
+    }
+    div.black_round{
+        width: 370px;
+        height: 370px;
+        transition: 0.5s;
+    }
+}
+
+/* mountain_equipment_big_border */
+@media screen and (max-width:1335px){
+    div.mountain_equipment_big_border{
+        width: 1100px;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width:1235px){
+    div.mountain_equipment_big_border{
+        width: 1000px;
+    }
+}
+@media screen and (max-width:1035px){
+    div.mountain_equipment_big_border{
+        width: 800px;
+    }
+}
+@media screen and (max-width:835px){
+    div.mountain_equipment_big_border{
+        width: 600px;
+    }
+    div.mountain_equipment_border{
+        justify-content: center;
+        transition: 0.5s;
+    }
+    div.equipment_border{
+        margin-bottom: 10%;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width:635px){
+    div.mountain_equipment_big_border{
+        width: 400px;
+    }
+}
+@media screen and (max-width:450px){
+    div.mountain_equipment_big_border{
+        width: 310px;
+    }
+    p.equipment_title{
+        font-size: 26px;
+        transition: 0.5s;
+    }
+}

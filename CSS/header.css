@@ -4,7 +4,8 @@ header.header{
     width: 100%;
     height: 100vh;
     overflow: hidden;
-/*    border: 1px solid red;*/
+    box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 img.logo{
     width: 180px;
@@ -15,42 +16,53 @@ img.logo{
     top: 25px;
     left: 70px;
     opacity: 50%;
-    z-index: 999;
+    z-index: 99;
+    transition: 1s;
+}
+img.logo:hover{
+    transform: scale(1.2);
+    opacity: 1;
 }
 @keyframes taiwan{
     0%{
         opacity: 0;
-        transform: scale(1) translate(-50%,-30%);
+        transform: scale(1) translate(-50%,50%);
     }
     1%{
         opacity: 1;
-        transform: scale(1) translate(-50%,-30%);
+        transform: scale(1) translate(-50%,50%);
     }
     100%{
         opacity: 0;
-        transform: scale(0) translate(-50%,-30%);
+        transform: scale(0) translate(-50%,50%);
     }
 }
 img.taiwan{    
     position: absolute;
-    top:50%;
+    bottom:50%;
     left:50%;
-    transform: translate(-50%,-30%);
-    transform-origin: 0% 0%;
+    /* transform: translate(-50%,1000%); */
+    transform-origin: 0% 100%;
     animation-name: taiwan;
     animation-delay: 7.5s;
     animation-duration: 10s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
+    z-index: 2;
 /*    border: 1px solid black;*/
 }
 video.video{
-    width: 100%; 
+    min-width: 100%;
+    min-height: 100%;  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 nav.nav{
 /*    width: 400px;*/
 /*    height: 80px;*/
-/*    border: 1px solid black;*/
+    /* border: 1px solid black; */
     float: right;
     clear: both;
     position: fixed;
@@ -61,53 +73,101 @@ nav.nav{
 div.menu_border{
     display: inline-block;
     vertical-align: middle;
-/*    border: 1px solid green;*/
+    /* border: 1px solid green; */
     position: relative;
-    width: 550px;
+    width: 650px;
     height: 45px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 ul.menu{
-/*    border: 1px solid blue;*/
+    /* border: 1px solid blue; */
     position: absolute;
     top:0;
-    left: 120%;
+    left: 0;
     white-space: nowrap;
+    transition: 1.5s;
 }
-@keyframes move{
+/* @keyframes move{
     0%{
         left: 120%;
     }
     100%{
         left: 0%;
     }
-}
+} */
 ul.menu.move{
-    animation-name: move;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    left: 0%;
+    /* animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; */
 }
 ul.menu li{
     display: inline-block;
-/*    border: 1px solid rgb(112,112,112);*/
-    background-color: rgba(0,0,0,0.30);
-    border-radius: 29px;
-    margin-right: 30px;
+    border: 1px solid rgba(112,112,112,0);
     padding: 10px 7px;
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.30);
+    margin-right: 30px;
+    position: relative;
+}
+ul.menu li:hover{
+    cursor: pointer;
+    border-radius: 0;
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: 0 0 2px rgba(255,255,255,0.7), 0 0 2px rgba(255,255,255,0.7), 0 0 2px rgba(255,255,255,0.7), 0 0 2px rgba(255,255,255,0.7);
+    transition: 1.5s;
+}
+ul.menu li::before{
+    content: "";
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    transition: 1s;  
+}
+ul.menu li::after{
+    content: "";
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    transition: 1s;
+}
+ul.menu li:hover::before{
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid rgb(112,112,112);
+    border-right: 2px solid rgb(112,112,112);
+}
+ul.menu li:hover::after{
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid rgb(112,112,112);
+    border-left: 2px solid rgb(112,112,112);
 }
 ul.menu li a{
     font-size: 20px;
     color:white;
     text-decoration: none;
     list-style: none;
+    transition: 1.5s;
+    position: relative;
+    z-index: 2;
+    /* border: 1px solid black; */
+}
+ul.menu li:hover a{
+    color: black;
 }
 button.burger_border{
     background-color: rgba(0,0,0,0);
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border: 0;
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
+    display: none;
 }
 button.burger_border:focus{
     outline: none;
@@ -121,6 +181,31 @@ button.burger_border span.line{
     border-radius: 1.5px;
     margin: 8px 5px;
     box-shadow: 1px 1px 5px black;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes line_infinite{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+span.line::before{
+    content: "";
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+}
+button.burger_border:hover span.line::before{
+    border-radius: 1.5px;
+    background-color: black;
+    animation-name: line_infinite;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.2s;
 }
 
 
@@ -129,11 +214,11 @@ button.burger_border span.line{
 div.view_all{
     width: 100%;
     height: 100%;
-    background-image: url("../HTML/index_1/HO.jpg");
+    background-image: url("../HTML/index_1/u.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
-    opacity: 0.3;
+    opacity: 0.6;
 }
 div.view_green{
     width: 80%;
@@ -148,14 +233,29 @@ div.view_green{
     left: 50%;
     transform: translate(-50%, 0%)
 }
+@keyframes typing{
+    from{
+        width: 0;
+    }
+}
+@keyframes caret{
+    50%{
+        border-color: rgba(0,0,0,1);
+    }
+}
 h1.view_all{
-    font-size: 120px;
+    font-size: 7vw;
     font-family: 'TaipeiSansTCBeta-Light';
     margin: 0;
     position: absolute;
     bottom: 0%;
     left: 50%;
-    transform: translate(-40%, 0%)
+    transform: translate(-40%, 0%);
+    border-right: .05em solid rgba(0,0,0,0);
+    width: 28vw;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(4),caret 1s steps(1) 7;
 }
 
 
@@ -173,42 +273,72 @@ div.view_point{
     z-index: -1;
 }
 h1.view_point{
-    font-size: 120px;
+    font-size: 7vw;
     font-family: 'TaipeiSansTCBeta-Light';
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-right: .05em solid rgba(0,0,0,0);
+    width: 35vw;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(5),caret 1s steps(1) 7;
 }
 
 
 /*index_2 increase css*/
-
+@keyframes word{
+    from{
+        opacity: 0;
+        transform: translateY(-100%) scale(0.8);
+        width: 0%;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%) scale(1.0);
+        width: 100%;
+    }
+}
 div.goup_all{
     width: 100%;
     height: 100%;
     background-image: url("../HTML/index_2/group_all.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center bottom 20%;  
+    background-position: center bottom 20%; 
+    transition: 0.5s; 
 }
 h1.group_all_1{
-    font-size: 80px;
+    font-size: 5.2vw;
     font-family: 'TaipeiSansTCBeta-Light';
     margin: 0;
     position: absolute;
     top: 15%;
     left: 20%;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.5s;
+    animation-name: word;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
 }
 h1.group_all_2{
-    font-size: 80px;
+    font-size: 5.2vw;
     font-family: 'TaipeiSansTCBeta-Light';
     margin: 0;
     position: absolute;
-    top: 30%;
+    top: 33%;
     left: 20%;
     white-space:nowrap;
+    overflow: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    animation-name: word;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
 }
 div.search_bar{
     width: 330px;
@@ -216,8 +346,9 @@ div.search_bar{
     position: absolute;
     top: 55%;
     left: 50%;
-/*    border: 1px solid red;*/
+    /* border: 1px solid red; */
     transform: translate(-50%, 0%);
+    transition: 0.5s;
 }
 input.search_bar{
     padding: 0;
@@ -231,11 +362,14 @@ input.search_bar{
     transform: translate(0%, -50%);
     font-size: 20px;
     text-indent: 20px;
+    transition: 0.5s;
 }
 input.search_bar:focus{
     outline: none;
     border: 1px solid rgb(112,112,112);
     border-radius: 30px;
+    box-shadow: 0px 0px 5px 0px black;
+    transition: 0.5s;
 }
 button.search_btn{
     margin: 0;
@@ -261,9 +395,7 @@ img.search_icon{
     border-radius: 50%;
     object-fit: contain;
     object-position: center;
-}
-#menu_border{
-    width: 650px;
+    transition: 0.5s;
 }
 
 /*index_2_1 increase css*/
@@ -279,7 +411,7 @@ div.join_group{
     z-index: -1; 
 }
 h1.join_group{
-    font-size: 120px;
+    font-size: 7vw;
     font-family: 'TaipeiSansTCBeta-Light';
     margin: 0;
     position: absolute;
@@ -301,13 +433,13 @@ div.create_group{
     z-index: -1; 
 }
 h1.create_group{
-    font-size: 120px;
+    font-size: 7vw;
     font-family: 'TaipeiSansTCBeta-Light';
     margin: 0;
     position: absolute;
-    top: 10%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
 }
 
 /*index_3 increase css*/
@@ -321,9 +453,10 @@ div.mountain_knowledge{
     position: fixed;
     z-index: -1;
     filter: blur(10px);
+    box-sizing: border-box;
 }
 h1.mountain_knowledge{
-    font-size: 120px;
+    font-size: 7vw;
     font-family: 'TaipeiSansTCBeta-Light';
     color: white;
     margin: 0;

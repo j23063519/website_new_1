@@ -1,6 +1,10 @@
 @import "./header.css";
 @import "./fonts.css";
 @import "./footer.css";
+@import "./RWD_header.css";
+*,*::after,*::after {
+    box-sizing: border-box !important;
+}
 body{
     font-size: 0;
     box-sizing: border-box;
@@ -9,7 +13,6 @@ body{
 h2,h3,h4{
     font-family: 'TaipeiSansTCBeta-Light';
 }
-
 /*主框*/
 main.main{
     width: 100%;
@@ -21,9 +24,10 @@ main.main{
 /*熱門揪團景點*/
 div.gorup_mountain{
     width: 1200px;
-/*    border: 1px solid green;*/
+    /* border: 1px solid green; */
     margin-top: 150px;
     margin-bottom: 150px;
+    position: relative;
 }
 h3.gorup_mountain{
     margin: 0;
@@ -32,16 +36,15 @@ h3.gorup_mountain{
 }
 div.mountain_border{
     width: 1200px;
-/*    border: 1px solid blue;*/
+    /* border: 1px solid blue; */
     display: flex;
     justify-content: space-between;
-    position: relative;
 }
 div.same_mountain_border{
     display: flex;
     flex-direction: column;
     justify-content: center;
-/*    border: 1px solid red;*/
+    /* border: 1px solid red; */
 }
 div.same_mountain{
     width: 180px;
@@ -49,6 +52,8 @@ div.same_mountain{
     border-radius: 50%;
     border: 1px solid black;
     margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.5s;
 }
 div.ho{
     background-image: url("../HTML/index_2/HO.jpg");
@@ -97,13 +102,14 @@ button.left_button{
     background-color: white;
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    left: -8%;
+    top: 70%;
+    left: -10%;
     transform: translate(0%, -50%);
+    display: none;
 }
 button.left_button:focus{
-    width: 50px;
-    height: 50px;
+    /* width: 50px;
+    height: 50px; */
     border: 1px solid black;
     border-radius: 50%;
     outline: none;
@@ -119,13 +125,14 @@ button.right_button{
     background-color: white;
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    right: -8%;
+    top: 70%;
+    right: -10%;
     transform: translate(0%, -50%);
+    display: none;
 }
 button.right_button:focus{
-    width: 50px;
-    height: 50px;
+    /* width: 50px;
+    height: 50px; */
     border: 1px solid black;
     border-radius: 50%;
     outline: none;
@@ -154,11 +161,12 @@ div.gorup_border{
     position: relative;
 }
 div.same_group_border{
-    width: 30%;
+    width: 356px;
     height: 500px;
     margin: 10px 0px 40px;
     border: 1px solid black;
     border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -170,6 +178,11 @@ div.same_top_border{
 /*    border: 1px solid red;*/
     border-radius: 10px 10px 0px 0px;
     position: relative;
+    cursor: pointer;
+    transition: 0.6s;
+}
+div.same_top_border:hover{
+    transform: scale(1.03);
 }
 div.wu_top_boder{
     background-image: url("../HTML/index_2/wu.jpg");
@@ -185,6 +198,11 @@ div.same_person_border{
     position: absolute;
     top: 3%;
     left: 3%;
+    cursor: pointer;
+    transition: 0.6s;
+}
+div.same_person_border:hover{
+    transform: translate(10%,10%) scale(1.05);
 }
 div.person_1{
     background-image: url("../HTML/index_2/1p.JPG");
@@ -210,14 +228,50 @@ div.same_title_bg{
 }
 a.same_title{
     text-decoration: none;
+    color: black;
 }
 a.same_title:visited{
     color: black;
+}
+@keyframes p_move{
+    50%{
+        transform: translateY(-5%);
+        color: white;
+        text-shadow: 0px 0px 5px blackl;
+    }
+}
+@keyframes p_after{
+    50%{
+        height: 8px;
+    }
 }
 p.same_title{
     margin: 0;
     font-size: 30px;
     padding: 20px 5px;
+    position: relative;
+}
+p.same_title::after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50% ,0);
+    width: 95%;
+    height: 3px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 100%;
+}
+p.same_title:hover{
+    animation-name: p_move;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+p.same_title:hover::after{
+    animation-name: p_after;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 div.same_bottom_border{
     width: 100%;
@@ -240,7 +294,8 @@ div.right_content{
 }
 p.same_left_title{
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
     margin-left: 10px;
 }
 p.first_title{
@@ -250,11 +305,15 @@ p.last_title{
     margin-bottom: 10px;
 }
 span.same_left_content{
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px black;
 }
 p.right_content_title{
     margin: 0;
     font-size: 20px;
+    font-weight: bold;
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -263,6 +322,9 @@ p.right_content_introduce{
     font-size: 16px;
     line-height: 25px;
     margin-left: 10px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px black;
 }
 /*南湖群峰步道*/
 div.nan_top_boder{
@@ -344,6 +406,7 @@ button.group_left_button{
     top: 50%;
     left: -8%;
     transform: translate(0%, -50%);
+    display: none;
 }
 button.group_left_button:focus{
     width: 50px;
@@ -366,6 +429,7 @@ button.group_right_button{
     top: 50%;
     right: -8%;
     transform: translate(0%, -50%);
+    display: none;
 }
 button.group_right_button:focus{
     width: 50px;
@@ -381,11 +445,12 @@ div.gorup_popular_list{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(248,248,243);
+    background-color: rgb(248, 248, 243);
     margin-bottom: 150px;
 }
 div.middle_border{
-/*    border: 1px solid yellow;*/
+   /* border: 1px solid yellow; */
+   margin-bottom: 5%;
 }
 h3.gorup_popular{
     margin: 0;
@@ -401,10 +466,12 @@ div.week_month_bg{
 }
 div.same_font{
     width: 50%;
+    cursor: pointer;
 /*    border: 1px solid blue;*/
     display: flex;
     justify-content: center;
     align-content: center;
+    transition: 0.6s;
 }
 div.left_week{
     background-color: rgb(255,255,255);
@@ -442,6 +509,7 @@ div.person_no_1{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: 0.6s;
 }
 h5.same_h5_border{
     margin: 0;
@@ -452,6 +520,7 @@ div.person_no_border{
     height: 120px;
     border: 1px solid black;
     border-radius: 50%;
+    transition: 0.6s;
 }
 p.no_name{
     margin: 0;
@@ -513,6 +582,7 @@ div.no_circle_background{
     height: 80px;
     border: 1px solid black;
     border-radius: 50%;
+    transition: 0.6s;
 }
 div.no_4_picture{
     background-image: url("../HTML/index_2/4p.JPG");
@@ -581,6 +651,633 @@ div.no_9_picture{
 div.last_nine{
     margin-bottom: 0;
 }
-*{
-/*    border: none !important;*/
+/* *{
+   border: none !important;
+} */
+/* header */
+@media screen and (min-width:1200px){
+    header.header{
+        min-height: 680px;
+    }
+}
+@media screen and (max-width:1400px){
+    h1.group_all_1{
+        font-size: 5.8vw;
+        top: 22%;
+        left: 20%;
+    }
+    h1.group_all_2{
+        font-size: 5.8vw;
+        top: 38%;
+        left: 20%;
+    }
+    div.search_bar{
+        width: 260px;
+        height: 100px;
+        top: 57%;
+    }
+    input.search_bar{
+        width: 260px;
+        height: 55px;
+    }
+}
+@media screen and (max-width:1199px){
+    header.header{
+        min-height: 680px;
+    }
+    h1.group_all_1{
+        font-size: 5.6vw;
+        top: 24%;
+        left: 20%;
+    }
+    h1.group_all_2{
+        font-size: 5.6vw;
+        top: 40%;
+        left: 20%;
+    }
+    div.search_bar{
+        width: 230px;
+        height: 80px;
+        top: 60%;
+    }
+    input.search_bar{
+        width: 230px;
+        height: 50px;
+    }
+}
+@media screen and (max-width:1000px){
+    header.header{
+        min-height: 580px;
+    }
+    h1.group_all_1{
+        top: 25%;
+        left: 20%;
+    }
+    h1.group_all_2{
+        top: 40%;
+        left: 20%;
+    }
+    div.search_bar{
+        width: 200px;
+        height: 60px;
+        top: 62%;
+    }
+    input.search_bar{
+        font-size: 18px;
+        width: 200px;
+        height: 40px;
+    }
+    img.search_icon{
+        width: 35px;
+        height: 35px;
+    }
+}
+@media screen and (max-width:800px){
+    header.header{
+        min-height: 480px;
+    }
+    div.search_bar{
+        top: 52%;
+    }
+}
+@media screen and (max-width:600px){
+    header.header{
+        min-height: 380px;
+    }
+    h1.group_all_1{
+        top: 23%;
+    }
+    h1.group_all_2{
+        top: 35%;
+    }
+    div.search_bar{
+        top: 45%;
+    }
+}
+@media screen and (max-width:450px){
+    header.header{
+        min-height: 210px;
+    }
+    div.search_bar{
+        width: 200px;
+        height: 40px;
+        top: 46%;
+    }
+    input.search_bar{
+        font-size: 16px;
+        width: 200px;
+        height: 30px;
+    }
+}
+
+/* 熱門揪團景點 */
+
+@media screen and (max-width:1235px){
+    div.gorup_mountain{
+        margin-top: 100px;
+        margin-bottom: 0px;
+        width: 1000px;
+        transition: 1s;
+    }
+    h3.gorup_mountain{
+        font-size: 55px;
+        margin-bottom: 55px;
+        transition: 1s;
+    }
+    div.mountain_border{
+        width: 1000px;
+        transition: 1s;
+    }
+    div.same_mountain{
+        width: 150px;
+        height: 150px;
+        transition: 1s;
+    }
+    p.same_mountain{
+        font-size: 32px;
+        transition: 1s;
+    }
+}
+@media screen and (max-width:1035px){
+    div.gorup_mountain{
+        margin-top: 80px;
+        width: 800px;
+    }
+    h3.gorup_mountain{
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    div.mountain_border{
+        width: 800px;
+    }
+    div.same_mountain{
+        width: 125px;
+        height: 125px;
+    }
+    p.same_mountain{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width:835px){
+    div.gorup_mountain{
+        margin-top: 80px;
+        width: 631.25px;
+    }
+    h3.gorup_mountain{
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    div.overflow{
+        width: 631.25px;
+        overflow-x: scroll;
+        transition: 1s;
+        scroll-behavior: smooth;
+        /* border: 1px solid green; */
+    }
+    div.overflow::-webkit-scrollbar{
+        display: none;
+    }
+    div.mountain_border{
+        width: 800px;
+    }
+    div.same_mountain{
+        width: 125px;
+        height: 125px;
+    }
+    p.same_mountain{
+        font-size: 28px;
+        padding-bottom: 7px;
+    }
+    button.left_button{
+        display: block;
+        left: -7.5%;
+        width: 40px;
+        height: 40px;
+        transition: 1s;
+    }
+    button.right_button{
+        display: block;
+        right: -7.5%;
+        width: 40px;
+        height: 40px;
+        transition: 1s;
+    }
+}
+@media screen and (max-width:760px){
+    div.gorup_mountain{
+        margin-top: 65px;
+        width: 462.5px;
+    }
+    h3.gorup_mountain{
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    div.overflow{
+        width: 464.5px;
+    }
+    button.left_button{
+        left: -10%;
+        width: 40px;
+        height: 40px;
+    }
+    button.right_button{
+        right: -10%;
+        width: 40px;
+        height: 40px;
+    }
+}
+@media screen and (max-width:590px){
+    div.gorup_mountain{
+        margin-top: 35px;
+        width: 352px;
+    }
+    h3.gorup_mountain{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    div.overflow{
+        width: 352px;
+    }
+    div.mountain_border{
+        width: 600px;
+    }
+    div.same_mountain{
+        width: 100px;
+        height: 100px;
+    }
+    p.same_mountain{
+        font-size: 20px;
+    }
+    button.left_button{
+        left: -10%;
+        width: 30px;
+        height: 30px;
+    }
+    button.right_button{
+        right: -10%;
+        width: 30px;
+        height: 30px;
+    }
+}
+@media screen and (max-width:450px){
+    div.gorup_mountain{
+        margin-top: 20px;
+        width: 280px;
+    }
+    h3.gorup_mountain{
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    div.overflow{
+        width: 280px;
+    }
+    div.mountain_border{
+        width: 486px;
+    }
+    div.same_mountain{
+        width: 70px;
+        height: 70px;
+    }
+    p.same_mountain{
+        font-size: 16px;
+    }
+    button.left_button{
+        display: none;
+    }
+    button.right_button{
+        display: none;
+    }
+}
+
+/* 揪揪團 */
+@media screen and (max-width:1235px){
+    div.gorup_group{
+        margin-top: 100px;
+        margin-bottom: 0px;
+        width: 1000px;
+        transition: 1s;
+    }
+    h3.gorup_title{
+        font-size: 55px;
+        margin-bottom: 55px;
+        transition: 1s;
+    }
+    div.gorup_border{
+        width: 1000px;
+        justify-content: space-around;
+        transition: 1s;
+    }
+}
+@media screen and (max-width:1035px){
+    div.gorup_group{
+        margin-top: 80px;
+        width: 800px;
+    }
+    h3.gorup_title{
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    div.gorup_border{
+        width: 800px;
+        justify-content: space-around;
+    }
+}
+@media screen and (max-width:835px){
+    div.gorup_group{
+        margin-top: 80px;
+        width: 631.25px;
+    }
+    h3.gorup_title{
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    div.gorup_border{
+        width: 631.25px;
+        justify-content: space-around;
+    }
+}
+@media screen and (max-width:760px){
+    div.gorup_group{
+        margin-top: 80px;
+        width: 462.5px;
+    }
+    h3.gorup_title{
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    div.gorup_border{
+        width: 462.5px;
+        justify-content: space-around;
+    }
+    p.same_title{
+        font-size: 28px;
+        transition: 1s;
+    }
+}
+@media screen and (max-width:590px){
+    div.gorup_group{
+        margin-top: 35px;
+        width: 352px;
+    }
+    h3.gorup_title{
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    div.gorup_border{
+        width: 352px;
+        justify-content: space-around;
+    }
+    div.same_group_border{
+        height: 400px;
+        transition: 1s;
+    }
+    p.same_title{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:450px){
+    div.gorup_group{
+        margin-top: 20px;
+        width: 280px;
+    }
+    h3.gorup_title{
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    div.gorup_border{
+        width: 280px;
+        justify-content: space-around;
+    }
+    div.same_group_border{
+        height: 350px;
+        margin-top: 0px;
+    }
+    p.same_title{
+        font-size: 20px;
+    }
+    p.same_left_title{
+        font-size: 14px;
+        transition: 1s;
+    }
+    span.same_left_content{
+        font-size: 14px;
+        transition: 1s;
+    }
+    p.right_content_title{
+        font-size: 14px;
+        transition: 1s;
+    }
+    p.right_content_introduce{
+        font-size: 14px;
+        line-height: 18px;
+        transition: 1s;
+    }
+}
+
+/* 熱門榜 */
+@media screen and (max-width:1235px){
+    div.gorup_popular_list{
+        margin-top: 100px;
+        margin-bottom: 20px;
+        width: 1000px;
+        box-shadow: 0px 0px 5px 1px black;
+        transition: 1s;
+    }
+    h3.gorup_popular{
+        font-size: 55px;
+        margin-bottom: 55px;
+        transition: 1s;
+    }
+    h4.same_font{
+        font-size: 36px;
+        transition: 1s;
+    }
+}
+@media screen and (max-width:1035px){
+    div.gorup_popular_list{
+        margin-top: 80px;
+        width: 800px;
+    }
+    h3.gorup_popular{
+        font-size: 55px;
+        margin-bottom: 55px;
+    }
+    h4.same_font{
+        font-size: 36px;
+    }
+}
+@media screen and (max-width:835px){
+    div.gorup_popular_list{
+        margin-top: 80px;
+        width: 631.25px;
+    }
+    h3.gorup_popular{
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    div.week_month_bg{
+        width: 631.25px;
+        transition: 1s;
+    }
+    h4.same_font{
+        font-size: 30px;
+        margin: 25px 0;
+    }
+    h5.same_h5_border,h5.no_same_type{
+        font-size: 26px;
+        transition: 1s;
+    }
+    p.no_name,p.no_four_nine_name{
+        font-size: 22px;
+        transition: 1s;
+    }
+}
+@media screen and (max-width:760px){
+    div.gorup_popular_list{
+        margin-top: 80px;
+        width: 462.5px;
+    }
+    h3.gorup_popular{
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    div.week_month_bg{
+        width: 462.5px;
+    }
+    h4.same_font{
+        font-size: 28px;
+        margin: 20px 0;
+    }
+    div.top_three_border{
+        height: 350px;
+        transition: 1s;
+    }
+    h5.same_h5_border,h5.no_same_type{
+        font-size: 26px;
+        transition: 1s;
+    }
+    h5.no_same_type{
+        margin-left: 6%;
+        margin-right: 2%;
+        transition: 1s;
+    }
+    div.person_no_border{
+        width: 100px;
+        height: 100px;
+        transition: 1s;
+    }
+    div.no_2{
+        left: 3%;
+        transition: 1s;
+    }
+    div.no_3{
+        right: 3%;
+        transition: 1s;
+    }
+    p.no_name,p.no_four_nine_name{
+        font-size: 22px;
+        transition: 1s;
+    }
+    p.no_four_nine_name{
+        margin-right: 5%;
+        transition: 1s;
+    }
+}
+@media screen and (max-width:590px){
+    div.gorup_popular_list{
+        margin-top: 35px;
+        width: 352px;
+    }
+    h3.gorup_popular{
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    div.week_month_bg{
+        width: 352px;
+    }
+    h4.same_font{
+        font-size: 26px;
+        margin: 15px 0;
+    }
+    h5.same_h5_border,h5.no_same_type{
+        font-size: 22px;
+    }
+    div.person_no_border{
+        width: 80px;
+        height: 80px;
+    }
+    div.same_no{
+        width: 120px;
+    }
+    div.no_2{
+        left: 3%;
+    }
+    div.no_3{
+        right: 3%;
+    }
+    p.no_name,p.no_four_nine_name{
+        font-size: 20px;
+    }
+    p.no_four_nine_name{
+        margin-left: 1%;
+        transition: 1s;
+    }
+    div.num_group_border{
+        margin-right: 5%;
+        transition: 1s;
+    }
+}
+@media screen and (max-width:450px){
+    div.gorup_popular_list{
+        margin-top: 20px;
+        width: 280px;
+    }
+    h3.gorup_popular{
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    div.week_month_bg{
+        width: 280px;
+    }
+    h4.same_font{
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    h5.same_h5_border,h5.no_same_type{
+        font-size: 18px;
+    }
+    div.person_no_border{
+        width: 80px;
+        height: 80px;
+    }
+    div.same_no{
+        width: 120px;
+    }
+    div.no_1{
+        top: 5%;
+    }
+    div.no_2{
+        left: 3%;
+        top: 55%;
+    }
+    div.no_3{
+        right: 3%;
+        top: 55%;
+    }
+    p.no_name,p.no_four_nine_name{
+        font-size: 16px;
+    }
+    p.no_four_nine_name{
+        margin-left: 5%;
+    }
+    p.group_num{
+        font-size: 14px;
+    }
+    div.num_group_border{
+        margin-right: 5%;
+    }
+    p.no_num{
+        font-size: 14px;
+        transition: 1s;
+    }
 }

@@ -1,13 +1,13 @@
 footer.footer{
     width: 100%;
-    height: 40vh;
-/*    border: 1px solid black;*/
+    height: 280px;
+    /* border: 1px solid black; */
     position: relative;
     background-color: rgba(255,255,255,0.7);
 }
 p.copyright{
     font-size: 16px;
-/*    border: 1px solid black;*/
+    /* border: 1px solid black; */
     display: inline-block;
     transform-origin: 50% 50%;
     transform: rotate(90deg) translate(50% ,50%);
@@ -26,14 +26,16 @@ span.progress_bar{
     transform: rotate(90deg);
 }
 p.go_top{
+    margin: 0;
     font-size: 16px;
     width: 16px;
 /*    border: 1px solid black;*/
     display: inline-block;
     transform: translate(-50% ,0%);
     position: absolute;
-    top: 33%;
+    top: 60%;
     left: 50%;
+    text-align: center;
 }
 p.mail{
     font-size: 16px;
@@ -64,9 +66,92 @@ img.tw{
     float: right;
 }
 a.go_top{
+    cursor: pointer;
     text-decoration: none;
     color: black;
+    font-size: 0;
+    width: 20px;
+    height: 180px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
 }
 a.go_top:visited{
     color: black;
+}
+@media screen and (max-width:700px){
+    footer.footer{
+        height: 240px;
+    }
+    a.go_top{
+        height: 165px;
+    }
+    p.copyright{
+        top: -9%;
+        left: -10%;
+    }
+    p.go_top{
+        top: 52%;
+    }
+    span.progress_bar{
+        width: 80px;
+    }
+}
+@media screen and (max-width:576px){
+    footer.footer{
+        height: 240px;
+    }
+    a.go_top{
+        height: 160px;
+    }
+    p.copyright{
+        top: -9%;
+        left: -15%;
+    }
+    p.go_top{
+        top: 50%;
+    }
+    p.mail{
+        white-space: nowrap;
+        top: 60%;
+        
+    }
+    span.progress_bar{
+        width: 70px;
+    }
+}
+@media screen and (max-width:450px){
+    footer.footer{
+        height: 200px;
+    }
+    a.go_top{
+        height: 140px;
+    }
+    p.copyright{
+        top: -5%;
+        left: -15%;
+        font-size: 12px;
+    }
+    p.go_top{
+        top: 50%;
+        font-size: 12px;
+    }
+    p.mail{
+        white-space: nowrap;
+        top: 60%;
+        font-size: 12px;
+    }
+    span.progress_bar{
+        width: 60px;
+    }
+    img.fb{
+        width: 30px;
+        height: 30px;
+    }
+    img.tw{
+        width: 30px;
+        height: 30px;
+    }
 }

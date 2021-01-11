@@ -1,6 +1,10 @@
 @import "./header.css";
 @import "./fonts.css";
 @import "./footer.css";
+@import "./RWD_header.css";
+*,*::after,*::after {
+    box-sizing: border-box !important;
+}
 body{
     font-size: 0;
     box-sizing: border-box;
@@ -10,6 +14,49 @@ body{
 h2,h4{
     font-family: 'TaipeiSansTCBeta-Light';
 }
+aside.height_border{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 18%;
+    left: 0%;
+    width: 260px;
+    height: 400px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 5px;
+    transition: all 1s;
+}
+div.button_border_border{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 50%;
+    right: -0%;   
+    transform: translate(100% ,-50%);
+}
+aside.height_border.mo{
+    transform: translateX(0%);
+}
+button.button_move{
+    font-size: 3vw;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    word-break: break-all;
+    width: 4vw;
+    transition: 0.5s;
+}
+button.button_move:active{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+button.button_move:hover{
+    cursor: pointer;
+}
 div.h600_w150{
     width: 150px; 
     height: 400px;
@@ -17,8 +64,8 @@ div.h600_w150{
     border-left: none;
     border-right: none;
     position: absolute;
-    top: 20%;
-    left: 5%;
+    top: 5%;
+    left: 8%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,7 +89,7 @@ p.h3100m{
 }
 div.height_same{
     width: 82.5px;
-    height: 40px;
+    height: 45px;
     border: 3px solid black;
     border-left: none;
     border-right: none;
@@ -124,10 +171,17 @@ button.same{
     border-radius: 50%;
     color: white;
     cursor: pointer;
+    transition: 1s;
+}
+main.main div.big_content_border.-none{
+    display: none;
 }
 button.u{
     position: absolute;
     top: 3%;
+    background-color: green;
+    border: 2px solid black;
+    box-shadow: 0px 0px 0px 1px black inset;
 }
 button.shue{
     position: absolute;
@@ -148,6 +202,9 @@ button.da{
 
 /*總覽介紹 css*/
 /*玉山*/
+/* main.main{
+    border: 1px solid blue;
+} */
 div.u_content_border{
     width: 340px;
     height: 300px;
@@ -155,16 +212,19 @@ div.u_content_border{
 /*    display: none;*/
 /*    border: 1px solid black;*/
     position: absolute;
-    top: 11%;
-    left: 58.6%;
+    top: 15%;
+    right: 2%;
 }
 div.same_content_bg{
     width: 340px;
     height: 200px;
     background-color: rgba(112,112,112,0.5);
-    overflow: hidden;
+    overflow: scroll;
 /*    border: 1px solid black;*/
     border-radius: 20px;
+}
+div.same_content_bg::-webkit-scrollbar{
+    display: none;
 }
 p.u_content{
     margin: 0;
@@ -206,11 +266,12 @@ div.shue_content_border{
     width: 340px;
     height: 300px;
     display: inline-block;
-    display: none;
-/*    border: 1px solid black;*/
+    /* display: none; */
+    /*border: 1px solid black;*/
     position: absolute;
-    top: 16%;
-    left: 49%;
+    top: 15%;
+    right: 2%;
+    /* display: none; */
 }
 p.shue_content{
     margin: 0;
@@ -229,19 +290,20 @@ p.shue_name{
     color: blakc;
     margin: 0;
     position: absolute;
-    top: 75%;
-    left: 0%;
+    top: 15%;
+    right: 2%;
 }
 /*奇萊主山*/
 div.gh_content_border{
     width: 340px;
     height: 300px;
     display: inline-block;
-    display: none;
+    /* display: none; */
 /*    border: 1px solid black;*/
     position: absolute;
-    top: 20%;
-    left: 44%;
+    top: 15%;
+    right: 2%;
+    /* display: none; */
 }
 p.gh_content{
     margin: 0;
@@ -268,11 +330,12 @@ div.ho_content_border{
     width: 340px;
     height: 300px;
     display: inline-block;
-    display: none;
+    /* display: none; */
 /*    border: 1px solid black;*/
     position: absolute;
-    top: 26%;
-    left: 37%;
+    top: 15%;
+    right: 2%;
+    /* display: none; */
 }
 p.ho_content{
     margin: 0;
@@ -302,8 +365,9 @@ div.da_content_border{
 /*    display: none;*/
 /*    border: 1px solid black;*/
     position: absolute;
-    top: 28%;
-    left: 33%;
+    top: 15%;
+    right: 2%;
+    /* display: none; */
 }
 p.da_content{
     margin: 0;
@@ -325,6 +389,387 @@ p.da_name{
     top: 75%;
     left: 0%;
 }
-*{
-/*    border: none !important;*/
+div.big_content_border{
+    transition: 1s;
 }
+/* 高度 */
+@media screen and (min-width:1400px){
+    header.header{
+        min-height: 700px;
+        height: 100vh;
+    }
+}
+@media screen and (min-width:1200px){
+    aside.height_border{
+        background-color: rgba(0,0,0,0);
+    }
+    div.button_border_border{
+        display: none;
+    }
+}
+@media screen and (max-width:1400px){
+    header.header{
+        height: 700px;
+    }
+    div.h600_w150{
+        height: 380px;
+    }
+    div.height_same{
+        height: 45px;
+    }
+    span.height_line{
+        width: 378px;
+    }
+    p.height_number{
+        font-size: 30px;
+        right: -80%;
+    }
+    p.height_number_content{
+        font-size: 26px;
+        right: -120%;
+    }
+}
+@media screen and (max-width:1200px){
+    header.header{
+        height: 600px;
+    }
+    aside.height_border{
+        transform: translateX(-100%);
+    }
+    div.h600_w150{
+        height: 350px;
+        width: 120px;
+    }
+    div.height_same{
+        height: 40px;
+        width: 70px;
+    }
+    span.height_line{
+        width: 348px;
+    }
+    p.height_number{
+        font-size: 26px;
+        right: -80%;
+    }
+    p.height_number_content{
+        font-size: 22px;
+        right: -120%;
+    }
+}
+@media screen and (max-width:1000px){
+    header.header{
+        height: 500px;
+    }
+    aside.height_border{
+        top: 10%;
+        width: 200px;
+    }
+    div.h600_w150{
+        height: 350px;
+        width: 100px;
+        top: 6%;
+    }
+    div.height_same{
+        height: 40px;
+        width: 60px;
+    }
+    span.height_line{
+        width: 348px;
+    }
+    p.height_number{
+        font-size: 22px;
+        right: -80%;
+    }
+    p.height_number_content{
+        font-size: 18px;
+        right: -120%;
+    }
+}
+@media screen and (max-width:800px){
+    header.header{
+        height: 400px;
+    }
+    aside.height_border{
+        top: 13%;
+        width: 160px;
+        height: 300px;
+    }
+    div.h600_w150{
+        height: 320px;
+        width: 60px;
+        top: 9%;
+        border-bottom: 0;
+    }
+    div.height_same{
+        height: 38px;
+        width: 60px;
+    }
+    div.height_5{
+        border-top: 0;
+    }
+    span.height_line{
+        width: 248px;
+        top: -1px;
+        left: 50%;
+        transform-origin: 0% 0%;
+        transform: rotate(90deg) translatey(-50%) ;
+    }
+    p.height_number{
+        font-size: 18px;
+        right: -120%;
+    }
+    p.h3100m , p.h3200m{
+        display: none;
+    }
+    p.height_number_content{
+        font-size: 18px;
+        right: -120%;
+    }
+}
+@media screen and (max-width:600px){
+    header.header{
+        height: 350px;
+    }
+    aside.height_border{
+        width: 130px;
+        height: 205px;
+    }
+    button.button_move{
+        font-size: 6vw;
+        width: 7vw;
+    }
+    div.h600_w150{
+        position: staatic;
+        border-bottom: 0;
+        /* transform: rotate(90deg) translatey(-60px); */
+        border: none;
+        /* display: none; */
+    }
+    div.height_same{
+        height: 38px;
+        width: 40px;
+        border: none;
+    }
+    div.height_5{
+        border-top: 0;
+    }
+    span.height_line{
+        width: 248px;
+        top: -1px;
+        left: 50%;
+        transform-origin: 0% 0%;
+        transform: rotate(90deg) translatey(-50%) ;
+        width: 0;
+    }
+    p.height_number{
+        font-size: 12px;
+        right: -80%;
+        transform: rotate(-90deg);
+        top: -11%;
+        left: 180%;
+        /* border: 1px solid red; */
+        word-break: break-all;
+        width: 12px;
+        text-align: center;
+        font-size: 0;
+    }
+    p.height_number_content{
+        font-size: 12px;
+        right: -80%;
+        transform: rotate(-90deg);
+        /* border: 1px solid red; */
+        word-break: break-all;
+        width: 12px;
+        text-align: center;
+        font-size: 0;
+    }
+    /* p.h3900m{
+        top: 104%;
+        left: 94%;
+    }
+    p.h3800m{
+        top: -110%;
+        left: 180%;
+    }
+    p.h3700m{
+        top: 105%;
+        left: 94%;
+    }
+    p.h3600m{
+        top: -110%;
+        left: 180%;
+    }
+    p.h3500m{
+        top: 105%;
+        left: 94%;
+    }
+    p.h3400m{
+        top: -110%;
+        left: 180%;
+    }
+    p.h3300m{
+        top: 105%;
+        left: 94%;
+    } */
+    button.same{
+        position: absolute;
+        left: 2%;
+        width: 100px;
+        height: 30px;
+        border-radius: 0;
+    }
+    button.same:after{
+        color: black;
+        font-size: 16px;
+    }
+    button.u{
+        top: 0px;
+    }
+    button.u::after{
+        content: "玉山";
+    }
+    button.shue{
+        top: 35px;
+    }
+    button.shue:after{
+        content: "雪山東峰";
+    }
+    button.gh{
+        top: 70px;
+    }
+    button.gh:after{
+        content: "奇萊主山";
+    }
+    button.ho{
+        top: 105px;
+    }
+    button.ho:after{
+        content: "合歡主峰";
+    }
+    button.da{
+        top: 140px;
+    }
+    button.da:after{
+        content: "大霸尖山";
+    }
+}
+@media screen and (max-width:450px){
+    header.header{
+        height: 300px;
+    }
+    aside.height_border{
+        top: 12%;
+    }
+    button.button_move{
+        font-size: 8vw;
+        width: 9vw;
+    }
+}
+/* 內容 */
+@media screen and (max-width:1200px){
+    div.same_content_bg{
+        width: 310px;
+        height: 200px;
+    }
+}
+@media screen and (max-width:1000px){
+    div.big_content_border{
+        right: 4%;
+        width: 280px;
+        height: 200px;
+    }
+    div.same_content_bg{
+        width: 280px;
+        height: 200px;
+    }
+    p.same_same_content::before{
+        font-size: 30px;
+    }
+    p.same_same_content{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:800px){
+    div.big_content_border{
+        width: 220px;
+        height: 200px;
+        top: 10%;
+        right: 3%;
+    }
+    div.same_content_bg{
+        width: 220px;
+        height: 200px;
+    }
+    p.same_same_content::before{
+        font-size: 24px;
+    }
+    p.same_same_content{
+        font-size: 14px;
+        line-height: 20px;
+        text-align: justify;
+    }
+    footer.footer{
+        margin-top: 4%;
+    }
+}
+@media screen and (max-width:600px){
+    main.main{
+        display: flex;
+        justify-content: center;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    div.big_content_border{
+        position: static;
+        width: 80%;
+        height: auto;
+    }
+    div.same_content_bg{
+        border-radius: 3%;
+        width: auto;
+        height: auto;
+        padding: 1%;
+    }
+    p.same_same_content::before{
+        font-size: 6vw;
+    }
+    p.same_same_content{
+        font-size: 4.5vw;
+        line-height: 25px;
+        text-align: justify;
+    }
+    footer.footer{
+        margin-top: 1%;
+    }
+}
+@media screen and (max-width:450px){
+    main.main{
+        display: flex;
+        justify-content: center;
+    }
+    div.big_content_border{
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    div.same_content_bg{
+        border-radius: 0%;
+        width: auto;
+        height: auto;
+        padding: 1%;
+    }
+    p.same_same_content::before{
+        font-size: 6vw;
+    }
+    p.same_same_content{
+        font-size: 4.5vw;
+        line-height: 25px;
+        text-align: justify;
+    }
+    footer.footer{
+        margin-top: 2%;
+    }
+}
+/* *{
+   border: none !important;
+} */

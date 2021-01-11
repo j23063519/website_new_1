@@ -1,0 +1,242 @@
+/* logo and nav */
+@media screen and (max-width: 1200px){
+  div.menu_border{
+    overflow: hidden;
+  }
+  ul.menu{
+      left: 120%;
+  }
+  button.burger_border{
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  nav.nav{
+    position: fixed;
+    top: 35px;
+    right: 50px;
+  }
+  ul.menu li{
+    margin-right: 20px;
+    padding: 10px 7px;
+  }
+  ul.menu li a{
+    font-size: 16px;
+  }
+  div.menu_border{
+    width: 490px;
+  }
+  ul.menu.move{
+    padding-left:0;
+  }
+  button.burger_border{
+    vertical-align: top;
+  }
+  button.burger_border span.line{
+    height: 2.5px;
+    width: 55px;
+    border-radius: 1.5px;
+    margin: 8px 4px;
+    box-shadow: 1px 1px 5px black;
+  }
+  ul.menu > li:nth-child(5){
+    margin-right: 0;
+  }
+  img.logo{
+    width: 140px;
+    height: 70px;
+    position: fixed;
+    top: 25px;
+    left: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+  nav.nav{
+    position: fixed;
+    top: 20px;
+    right: 35px;
+  }
+  ul.menu li{
+    margin-right: 15px;
+    padding: 10px 7px;
+  }
+  ul.menu li a{
+    font-size: 12px;
+  }
+  div.menu_border{
+    width: 390px;
+  }
+  ul.menu.move{
+    padding-left:0;
+  }
+  div.menu_border{
+    height: 36px;
+  }
+  button.burger_border{
+    vertical-align: top;
+  }
+  button.burger_border span.line{
+    height: 2.5px;
+    width: 45px;
+    border-radius: 1.5px;
+    margin: 6.5px 4px;
+    box-shadow: 1px 1px 5px black;
+  }
+  ul.menu > li:nth-child(5){
+    margin-right: 0;
+  }
+  img.logo{
+    width: 110px;
+    height: 55px;
+    position: fixed;
+    top: 15px;
+    left: 40px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+  nav.nav{
+    position: fixed;
+    top: 7px;
+    right: 8px;
+  }
+  ul.menu li{
+    margin-right: 10px;
+    padding: 8px 7px;
+  }
+  ul.menu li a{
+    font-size: 12px;
+  }
+  div.menu_border{
+    width: 370px;
+  }
+  ul.menu.move{
+    padding-left:0;
+  }
+  div.menu_border{
+    height: 32px;
+  }
+  button.burger_border{
+    vertical-align: top;
+  }
+  button.burger_border span.line{
+    height: 3px;
+    width: 45px;
+    border-radius: 1.5px;
+    margin: 5px 3px;
+    box-shadow: 1px 1px 5px black;
+  }
+  ul.menu > li:nth-child(5){
+    margin-right: 0;
+  }
+  img.logo{
+    width: 80px;
+    height: 40px;
+    position: fixed;
+    top: 5px;
+    left: 8px;
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  nav.nav{
+    position: fixed;
+    top: 7px;
+    right: 8px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  ul.menu li{
+    display: block;
+    padding: 6px 6px;
+    margin: 3px 2px 3px 2px;
+    text-align: center;
+  }
+  ul.menu li a{
+    font-size: 12px;
+  }
+  div.menu_border{
+    display: block;
+    width: 70px;
+    height: 160px;
+  }
+  ul.menu.move{
+    padding-left:0;
+  }
+  button.burger_border{
+    vertical-align: top;
+    padding: 1px 3px;
+    align-self: center;
+    margin-bottom: 5px;
+  }
+  button.burger_border span.line{
+    height: 4px;
+    width: 60px;
+    border-radius: 1.5px;
+    margin: 6px 1px;
+    box-shadow: 1px 1px 5px black;
+  }
+  img.logo{
+    width: 80px;
+    height: 40px;
+    position: fixed;
+    top: 5px;
+    left: 8px;
+  }
+}
+
+/* video header taiwan */
+@media screen and (min-width: 1200px){  
+  
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  header.header{
+    height: 80vh;
+  }
+  img.taiwan{
+    width: 500px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+  header.header{
+    height: 70vh;
+  }
+  video.video{
+    width: 120%;
+  }
+  img.taiwan{
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+  header.header{
+    height: 60vh;
+  }
+  video.video{
+    width: 140%;
+  }
+  img.taiwan{
+    width: 300px;
+    height: 200px;
+  }
+}
+
+
+@media screen and (max-width: 576px){
+ header.header{
+    height: 50vh;
+  }
+  video.video{
+    width: 160%;
+  }
+  img.taiwan{
+    width: 200px;
+    height: 150px;
+  }
+}

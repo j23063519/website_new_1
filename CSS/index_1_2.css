@@ -1,10 +1,15 @@
 @import "./header.css";
 @import "./fonts.css";
 @import "./footer.css";
+@import "./RWD_header.css";
+*,*::after,*::after {
+    box-sizing: border-box !important;
+}
 body{
     font-size: 0;
     box-sizing: border-box;
     font-family: 'TaipeiSansTCBeta-Regular';
+    position: relative;
 }
 h2,h4{
     font-family: 'TaipeiSansTCBeta-Light';
@@ -16,6 +21,7 @@ main.main{
 /*    border: 1px solid red;*/
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 div.conversation_border{
     width: 1200px;
@@ -31,6 +37,9 @@ div.mon0817{
     background-color: rgb(248,248,248);
     border-radius: 50px;
     margin-bottom: 100px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 1s;
 }
 p.mon0817{
     margin: 0;
@@ -48,6 +57,16 @@ div.green{
     position: relative;
     align-self: flex-end;
     margin-bottom: 100px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 1s;
+    cursor: pointer; 
+}
+div.green:active{
+    transform: translatey(15%);
+}
+div.green:active div.let{
+    transform: translatey(15%);
 }
 p.same_font{
     margin: 0;
@@ -74,6 +93,16 @@ div.gray{
     position: relative;
     align-self: flex-start;
     margin-bottom: 100px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 1s; 
+    cursor: pointer;
+}
+div.gray:active{
+    transform: translatey(50%);
+}
+div.gray:active div.let{
+    transform: translatey(50%);
 }
 p.left_1{
     padding: 15px 35px 35px 15px;
@@ -94,6 +123,11 @@ div.same_person_boder{
     position: absolute;
     top: 0;
     left: -90px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+div.same_person_boder:hover{
+    transform: rotateY(360deg) scale(1.1);
 }
 div.person_1{
     background-image: url("../HTML/index_1_2/1p.JPG");
@@ -263,7 +297,7 @@ p.left_12{
 div.right_8{
     display: flex;
     flex-direction: column;
-    width: 1060px;
+    /* width: 1060px; */
 }
 div.bath_border{
     display: flex;
@@ -308,7 +342,7 @@ div.castle_border{
 div.castle_1{
     width: 500px;
     height: 300px;
-    background-image: url("../HTML/index_1_2/bath_1.jpg");
+    background-image: url("../HTML/index_1_2/castle.jpg");
     background-size: cover;
     background-position:bottom;
     background-repeat: no-repeat;
@@ -317,7 +351,7 @@ div.castle_1{
 div.castle_2{
     width: 500px;
     height: 300px;
-    background-image: url("../HTML/index_1_2/bath_2.jpg");
+    background-image: url("../HTML/index_1_2/castle_1.jpg");
     background-size: cover;
     background-position:center;
     background-repeat: no-repeat;
@@ -372,6 +406,226 @@ p.right_11{
     padding: 15px 15px 25px 15px;
     line-height: 35px;
 }
-*{
-/*    border: none !important;*/
+article.article{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+    max-height: 90vh;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1s;
+    overflow-y: auto;
+    padding: 7% 0;
+    transition: 1s;
+}
+article.article div{
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    transition: 1s;
+}
+img.jump_pic{
+    width: 100%;
+    height: 400px;
+    transition: 1s;
+}
+button.close_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    outline: 0;
+    color: white;
+    background-color: black;
+    font-size: 6vw;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: 1s;
+}
+button.close_btn:hover{
+    transform: rotateY(180deg);
+}
+/* *{
+   border: none !important;
+} */
+
+/* main */
+@media screen and (max-width:1400px){
+    header.header{
+        transition: 1s;
+    }
+    div.conversation_border{
+        transition: 1s;
+        width: 1000px;
+    }
+}
+@media screen and (max-width:1300px){
+    header.header{
+        transition: 1s;
+    }
+    div.conversation_border{
+        width: 900px;
+    }
+    div.same_width{
+        width: 400px;
+        height: 250px;
+    }
+}
+@media screen and (max-width:1200px){
+    header.header{
+        transition: 1s;
+    }
+    div.conversation_border{
+        width: 900px;
+    }
+    div.same_width{
+        width: 400px;
+        height: 250px;
+    }
+    div.gray{
+        margin-left: 80px;
+    }
+}
+@media screen and (max-width:1000px){
+    div.conversation_border{
+        width: 700px;
+    }
+    div.same_green_bg{
+        flex-direction: column;
+    }
+    p.right_8{
+        width: 400px;
+    }
+    p.right_9{
+        width: 400px;
+    }
+    p.right_11{
+        width: 400px;
+    }
+}
+@media screen and (max-width:800px){
+    div.conversation_border{
+        width: 500px;
+    }
+}
+@media screen and (max-width:600px){
+    div.conversation_border{
+        width: 400px;
+    }
+    div.same_width{
+        width: 300px;
+        height: 200px;
+    }
+    main.main p{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    p.right_7{
+        width: 300px;
+    }
+    p.right_8{
+        width: 300px;
+    }
+    p.right_9{
+        width: 300px;
+    }
+    p.right_11{
+        width: 300px;
+    }
+}
+@media screen and (max-width:450px){
+    div.conversation_border{
+        width: 290px;
+    }
+    div.same_width{
+        width: 250px;
+        height: 150px;
+    }
+    div.gray{
+        margin-left: 90px;
+    }
+    p.right_7{
+        width: 250px;
+    }
+    p.right_8{
+        width: 250px;
+    }
+    p.right_9{
+        width: 250px;
+    }
+    p.right_11{
+        width: 250px;
+    }
+}
+
+/* 彈跳視窗 */
+@media screen and (max-width:1200px){
+    article.article{
+        width: 85%;
+    }
+}
+@media screen and (max-width:800px){
+    article.article{
+        width: 90%;
+    }
+    article.article div{
+        width: 80%;
+        height: 350px;
+    }
+    img.jump_pic{
+        width: 100%;
+        height: 350px;
+    }
+}
+@media screen and (max-width:700px){
+    article.article{
+        width: 90%;
+        height: 50vh;
+        padding-top: 4%;
+        padding-bottom: 0%;
+    }
+    article.article div{
+        width: 90%;
+        height: 300px;
+    }
+    img.jump_pic{
+        width: 100%;
+        height: 300px;
+    }
+}
+@media screen and (max-width:600px){
+    article.article{
+        width: 100%;
+        height: 100vh;
+        max-height: 100vh;
+        padding-top: 45%;
+    }
+    article.article div{
+        width: 100%;
+        height: 350px;
+    }
+    img.jump_pic{
+        width: 100%;
+        height: 350px;
+    }
+}
+@media screen and (max-width:450px){
+    article.article{
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+    article.article div{
+        height: 230px;
+    }
+    img.jump_pic{
+        height: 230px;
+    }
 }

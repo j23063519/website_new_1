@@ -1,6 +1,10 @@
 @import "./header.css";
 @import "./fonts.css";
 @import "./footer.css";
+@import "./RWD_header.css";
+*,*::after,*::after {
+    box-sizing: border-box !important;
+}
 body{
     font-size: 0;
     box-sizing: border-box;
@@ -18,22 +22,21 @@ main.main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 div.space_order{
     width: 62.5%;
-    height: 30vh;
-/*    border: 1px solid blue;*/
+    min-width: 800px;
+    height: 200px;
+    border: 1px solid blue;
+    display: none;
 }
 div.create_border{
-    width: 62.5%;
-    min-width: 800px;
-    height: 70vh;
-/*    border: 1px solid red;*/
+    width: 1000px;
+    height: 550px;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
 }
 /*left_border*/
 div.left_border{
@@ -63,6 +66,9 @@ div.person_2{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+button{
+    cursor: pointer;
 }
 button.upload_person_logo{
     margin: 0;
@@ -448,3 +454,301 @@ button.more{
 /* *{
  border: none !important;
 } */
+div.left_border,div.right_top_border,div.right_bottom_border{
+    box-shadow: 0px 0px 5px 1px black;
+}
+/* header */
+@media screen and (min-width:1200px){
+    header.header{
+        min-height: 680px;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width:1199px){
+    header.header{
+        min-height: 680px;
+    }
+}
+@media screen and (max-width:1000px){
+    header.header{
+        min-height: 580px;
+    }
+}
+@media screen and (max-width:800px){
+    header.header{
+        min-height: 480px;
+    }
+    h1.create_group{
+        font-size: 8vw;
+    }
+}
+@media screen and (max-width:600px){
+    header.header{
+        min-height: 380px;
+    }
+}
+@media screen and (max-width:450px){
+    header.header{
+        min-height: 300px;
+    }
+    h1.create_group{
+        font-size: 10vw;
+    }
+}
+
+/* create_border */
+@media screen and (max-width:1035px){
+    div.create_border{
+        width: 800px;
+        height: 450px;
+        transition: 0.5s;
+    }
+    div.person_2{
+        width: 100px;
+        height: 100px;
+        transition: 0.5s;
+    }
+    button.upload_picture_little{
+        padding: 7px;
+        transition: 0.5s;
+    }
+    label.same_font{
+        font-size: 22px;
+        margin-right: 4%;
+        margin-left: 3%;
+        transition: 0.5s;
+    }
+    textarea.introduce_content{
+        width: 90%;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width:835px){
+    div.create_border{
+        width: 580px;
+        height: auto;
+        flex-direction: column;
+    }
+    div.left_border{
+        width: 100%;
+        height: 650px;
+        transition: 0.5s;
+    }
+    div.right_border{
+        width: 100%;
+        height: 650px;
+        margin-top: 11%;
+        transition: 0.5s;
+    }
+    div.person_2{
+        width: 150px;
+        height: 150px;
+    }
+    button.upload_person_logo{
+        font-size: 22px;
+        transition: 0.5s;
+    }
+    label.name{
+        font-size: 24px;
+        transition: 0.5s;
+    }
+    input.name_name{
+        font-size: 24px;
+        transition: 0.5s;
+    }
+    div.male_female_border{
+        font-size: 24px;
+        transition: 0.5s;
+    }
+    button.upload_picture{
+        font-size: 22px;
+        transition: 0.5s;
+    }
+    button.upload_picture_little{
+        font-size: 22px;
+        padding: 9px;
+        transition: 0.5s;
+    }
+    label.same_font{
+        font-size: 22px;
+        margin-right: 4%;
+        margin-left: 7%;
+    }
+    input.content{
+        font-size: 22px;
+        transition: 0.5s;
+    }
+    button.create{
+        padding: 2% 0;
+        margin-left: 8%;
+        transition: 0.5s;
+    }
+    button.cancel{
+        padding: 2% 0;
+        transition: 0.5s;
+    }
+    textarea.introduce_content{
+        font-size: 20px;
+        width: 90%;
+    }
+    p.same_font_bottom_title{
+        font-size: 22px;
+        transition: 0.5s;
+    }
+}
+
+@media screen and (max-width:635px){
+    div.create_border{
+        width: 450px;
+        height: auto;
+        flex-direction: column;
+    }
+    div.left_border{
+        width: 100%;
+        height: 550px;
+    }
+    div.right_border{
+        width: 100%;
+        height: 550px;
+        margin-top: 11%;
+    }
+    div.left_top_border,div.left_middle_border,div.left_bottom_border{
+        width: 70%;
+        transition: 0.5s;
+    }
+    div.person_2{
+        width: 100px;
+        height: 100px;
+    }
+    button.upload_person_logo{
+        font-size: 16px;
+    }
+    label.name{
+        font-size: 20px;
+    }
+    input.name_name{
+        font-size: 20px;
+    }
+    div.male_female_border{
+        font-size: 20px;
+    }
+    button.upload_picture{
+        font-size: 16px;
+    }
+    button.upload_picture_little{
+        font-size: 16px;
+        padding: 9px;
+    }
+    label.same_font{
+        font-size: 18px;
+        margin-right: 8%;
+        margin-left: 3%;
+    }
+    input.content{
+        font-size: 18px;
+    }
+    button.create{
+        padding: 2% 0;
+    }
+    button.cancel{
+        padding: 2% 0;
+    }
+    p.same_font_bottom_title{
+        font-size: 18px;
+    }
+    textarea.introduce_content{
+        font-size: 16px;
+        width: 90%;
+        height: 80%;
+    }
+}
+
+
+@media screen and (max-width:450px){
+    div.create_border{
+        width: 100%;
+        margin-bottom: 10%;
+        height: auto;
+        flex-direction: column;
+    }
+    div.left_border,div.right_top_border,div.right_bottom_border{
+        box-shadow: none;
+    }
+    div.left_border{
+        width: 100%;
+        height: 400px;
+    }
+    div.left_top_border,div.left_middle_border,div.left_bottom_border{
+        width: 70%;
+    }
+    div.right_border{
+        width: 100%;
+        height: auto;
+        margin-top: 11%;
+    }
+    div.right_top_border{
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    div.right_top_left_border{
+        width: 100%;
+        height: 270px;
+    }
+    div.person_2{
+        width: 100px;
+        height: 100px;
+    }
+    button.upload_person_logo{
+        font-size: 16px;
+    }
+    label.name{
+        font-size: 18px;
+    }
+    input.name_name{
+        font-size: 18px;
+    }
+    div.male_female_border{
+        font-size: 18px;
+    }
+    button.upload_picture{
+        font-size: 16px;
+    }
+    button.upload_picture_little{
+        font-size: 16px;
+        padding: 9px;
+    }
+    div.right_top_right_border{
+        width: 100%;
+        height: 310px;
+    }
+    label.same_font{
+        font-size: 18px;
+        margin-right: 7%;
+        margin-left: 10%;
+    }
+    input.content{
+        font-size: 18px;
+    }
+    button.create{
+        padding: 2% 0;
+        margin-left: 8%;
+    }
+    button.cancel{
+        padding: 2% 0;
+    }
+    div.right_bottom_border{
+        height: 200px;
+        margin-top: 10%;
+    }
+    div.same_right_bottom_top_title{
+        width: 33.33333%;
+    }
+    p.same_font_bottom_title{
+        font-size: 18px;
+    }
+    textarea.introduce_content{
+        font-size: 16px;
+        width: 90%;
+        height: 80%;
+    }
+}

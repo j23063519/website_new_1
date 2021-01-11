@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <meta charset="UTF-8">
     <title>山友揪團</title>
     <link rel="stylesheet" href="../CSS/normalize.css">
     <link rel="stylesheet" href="../CSS/index_2.css">
     <link rel="icon" type="image/png" href="./index/logo.png">
 </head>
+
 <body>
     <header class="header" id="header">
         <div class="goup_all"></div>
         <h1 class="group_all_1">還在一個人登山</h1>
         <h1 class="group_all_2">一起找尋志同道合的人吧!!</h1>
         <div class="search_bar">
-            <input type="text" name="search_bar" class="search_bar" id="search_bar" placeholder="請輸入登山景點">
+            <input type="text" name="search_bar" class="search_bar" id="search_bar" placeholder="請輸入登山景點"
+                maxlength="20">
             <button type="button" class="search_btn">
-                <img src="./index_2/search_icon.png" class="search_icon">
+                <img src="./index_2/search_icon.png" class="search_icon" id="search_icon">
             </button>
         </div>
-        <a href="index.html"><img class="logo" src="./index/logo.png"></a>
+        <a href="../index.html"><img class="logo" src="./index/logo.png"></a>
         <nav class="nav">
-            <div class="menu_border" id="menu_border">
-               <ul class="menu">
-                   <li><a href="index_1.html" target="_blank">登山總覽</a></li>
-                   <li><a href="index_2.html" target="_blank">山友揪團</a></li>
-                   <li><a href="index_2_2.html" target="_blank">建立揪團</a></li>
-                   <li><a href="index_3.html" target="_blank">登山須知</a></li>
-                   <li><a href="index_4.html" target="_blank">登入/註冊</a></li>
-               </ul>
+            <div class="menu_border">
+                <ul class="menu">
+                    <li><a href="index_1.html">登山總覽</a></li>
+                    <li><a href="index_2.html">山友揪團</a></li>
+                    <li><a href="index_2_2.html">建立揪團</a></li>
+                    <li><a href="index_3.html">登山須知</a></li>
+                    <li><a>登入/註冊</a></li>
+                </ul>
             </div>
             <button type="button" class="burger_border">
                 <span class="line"></span>
@@ -39,61 +43,67 @@
     <main class="main">
         <div class="gorup_mountain">
             <h3 class="gorup_mountain">熱門揪團景點</h3>
-            <div class="mountain_border">
-                <div class="same_mountain_border">
-                    <div class="ho same_mountain"></div>
-                    <p class="ho same_mountain">合歡主峰</p>
+            <div class="overflow">
+                <div class="mountain_border">
+                    <div class="same_mountain_border">
+                        <div class="ho same_mountain"></div>
+                        <p class="ho same_mountain">合歡主峰</p>
+                    </div>
+                    <div class="same_mountain_border">
+                        <div class="da same_mountain"></div>
+                        <p class="da same_mountain">大霸尖山</p>
+                    </div>
+                    <div class="same_mountain_border">
+                        <div class="ji same_mountain"></div>
+                        <p class="gh same_mountain">奇萊主山</p>
+                    </div>
+                    <div class="same_mountain_border">
+                        <div class="sh same_mountain"></div>
+                        <p class="sh same_mountain">雪山東峰</p>
+                    </div>
+                    <div class="same_mountain_border">
+                        <div class="u same_mountain"></div>
+                        <p class="u same_mountain">玉山主峰</p>
+                    </div>
                 </div>
-                <div class="same_mountain_border">
-                    <div class="da same_mountain"></div>
-                    <p class="da same_mountain">大霸尖山</p>
-                </div>
-                <div class="same_mountain_border">
-                    <div class="ji same_mountain"></div>
-                    <p class="gh same_mountain">奇萊主山</p>
-                </div>
-                <div class="same_mountain_border">
-                    <div class="sh same_mountain"></div>
-                    <p class="sh same_mountain">雪山東峰</p>
-                </div>
-                <div class="same_mountain_border">
-                    <div class="u same_mountain"></div>
-                    <p class="u same_mountain">玉山主峰</p>
-                </div>
-                <button type="button" class="left_button">&lt;</button>
-                <button type="button" class="right_button">&gt;</button>
             </div>
+            <button type="button" class="left_button">&lt;</button>
+            <button type="button" class="right_button">&gt;</button>
         </div>
+
+
         <div class="gorup_group">
             <h3 class="gorup_title">揪揪團</h3>
             <div class="jq_border">
-                <h4 class="north">北區</h4>
+                <!-- <h4 class="north">北區</h4> -->
                 <div class="gorup_border">
-                    <div class="wu_border same_group_border">     
+                    <div class="wu_border same_group_border">
                         <div class="wu_top_boder same_top_border">
                             <div class="person_1 same_person_border">
                                 <p class="person_1 same_person_border">紀恆達</p>
                             </div>
                             <div class="wu_bg same_title_bg">
-                                <a href="index_2_1.html" target="_blank" class="same_title"><p class="same_title">武陵四秀步道</p></a>
+                                <a href="index_2_1.html" class="same_title">
+                                    <p class="same_title">武陵四秀步道</p>
+                                </a>
                             </div>
                         </div>
                         <div class="wu_bottom_boder same_bottom_border">
                             <div class="left_content">
                                 <p class="first_title same_left_title">
-                                   集合地點:
+                                    集合地點:
                                     <span class="same_left_content">武陵山莊</span>
                                 </p>
                                 <p class="same_left_title">
-                                   集合時間:
-                                    <span class="same_left_content">2020/08/22   07:00</span>
+                                    集合時間:
+                                    <span class="same_left_content">2020/08/22 07:00</span>
                                 </p>
                                 <p class="same_left_title">
-                                   參加人數:
+                                    參加人數:
                                     <span class="same_left_content">10人</span>
                                 </p>
                                 <p class="last_title same_left_title">
-                                   行程時間:
+                                    行程時間:
                                     <span class="same_left_content">3天</span>
                                 </p>
                             </div>
@@ -109,25 +119,27 @@
                                 <p class="person_2 same_person_border">黃家佳</p>
                             </div>
                             <div class="nan_bg same_title_bg">
-                                <a href="index_2_1.html" target="_blank" class="same_title"><p class="same_title">南湖群峰步道</p></a>
+                                <a href="index_2_1.html" class="same_title">
+                                    <p class="same_title">南湖群峰步道</p>
+                                </a>
                             </div>
                         </div>
                         <div class="nan_bottom_boder same_bottom_border">
                             <div class="left_content">
                                 <p class="first_title same_left_title">
-                                   集合地點:
+                                    集合地點:
                                     <span class="same_left_content">思源啞口</span>
                                 </p>
                                 <p class="same_left_title">
-                                   集合時間:
-                                    <span class="same_left_content">2020/08/25   05:00</span>
+                                    集合時間:
+                                    <span class="same_left_content">2020/08/25 05:00</span>
                                 </p>
                                 <p class="same_left_title">
-                                   參加人數:
+                                    參加人數:
                                     <span class="same_left_content">7人</span>
                                 </p>
                                 <p class="last_title same_left_title">
-                                   行程時間:
+                                    行程時間:
                                     <span class="same_left_content">4天</span>
                                 </p>
                             </div>
@@ -143,25 +155,27 @@
                                 <p class="person_3 same_person_border">徐庭亭</p>
                             </div>
                             <div class="be_bg same_title_bg">
-                                <a href="index_2_1.html" target="_blank" class="same_title"><p class="same_title">北大武山步道</p></a>
+                                <a href="index_2_1.html" class="same_title">
+                                    <p class="same_title">北大武山步道</p>
+                                </a>
                             </div>
                         </div>
                         <div class="be_bottom_boder same_bottom_border">
                             <div class="left_content">
                                 <p class="first_title same_left_title">
-                                   集合地點:
+                                    集合地點:
                                     <span class="same_left_content">新登山口</span>
                                 </p>
                                 <p class="same_left_title">
-                                   集合時間:
-                                    <span class="same_left_content">2020/09/01   04:00</span>
+                                    集合時間:
+                                    <span class="same_left_content">2020/09/01 04:00</span>
                                 </p>
                                 <p class="same_left_title">
-                                   參加人數:
+                                    參加人數:
                                     <span class="same_left_content">12人</span>
                                 </p>
                                 <p class="last_title same_left_title">
-                                   行程時間:
+                                    行程時間:
                                     <span class="same_left_content">2天</span>
                                 </p>
                             </div>
@@ -177,25 +191,27 @@
                                 <p class="person_4 same_person_border">黃真真</p>
                             </div>
                             <div class="gia_bg same_title_bg">
-                                <a href="index_2_1.html" target="_blank" class="same_title"><p class="same_title">嘉明湖步道</p></a>
+                                <a href="index_2_1.html" class="same_title">
+                                    <p class="same_title">嘉明湖步道</p>
+                                </a>
                             </div>
                         </div>
                         <div class="gia_bottom_boder same_bottom_border">
                             <div class="left_content">
                                 <p class="first_title same_left_title">
-                                   集合地點:
+                                    集合地點:
                                     <span class="same_left_content">步道入口</span>
                                 </p>
                                 <p class="same_left_title">
-                                   集合時間:
-                                    <span class="same_left_content">2020/09/08   04:30</span>
+                                    集合時間:
+                                    <span class="same_left_content">2020/09/08 04:30</span>
                                 </p>
                                 <p class="same_left_title">
-                                   參加人數:
+                                    參加人數:
                                     <span class="same_left_content">8人</span>
                                 </p>
                                 <p class="last_title same_left_title">
-                                   行程時間:
+                                    行程時間:
                                     <span class="same_left_content">3天</span>
                                 </p>
                             </div>
@@ -211,31 +227,33 @@
                                 <p class="person_5 same_person_border">黃家旗</p>
                             </div>
                             <div class="tao_bg same_title_bg">
-                                <a href="index_2_1.html" target="_blank" class="same_title"><p class="same_title">桃山登山山徑</p></a>
+                                <a href="index_2_1.html" class="same_title">
+                                    <p class="same_title">桃山登山山徑</p>
+                                </a>
                             </div>
                         </div>
                         <div class="tao_bottom_boder same_bottom_border">
                             <div class="left_content">
                                 <p class="first_title same_left_title">
-                                   集合地點:
+                                    集合地點:
                                     <span class="same_left_content">武陵山莊</span>
                                 </p>
                                 <p class="same_left_title">
-                                   集合時間:
-                                    <span class="same_left_content">2020/09/16   05:30</span>
+                                    集合時間:
+                                    <span class="same_left_content">2020/09/16 05:30</span>
                                 </p>
                                 <p class="same_left_title">
-                                   參加人數:
+                                    參加人數:
                                     <span class="same_left_content">15人</span>
                                 </p>
                                 <p class="last_title same_left_title">
-                                   行程時間:
+                                    行程時間:
                                     <span class="same_left_content">2天</span>
                                 </p>
                             </div>
                             <div class="right_content">
                                 <p class="right_content_title">介紹:</p>
-                                <p class="right_content_introduce">在這個悠然的日子，跟我一同遨遊桃山，希望能有有緣人與我共同擁有這個美好的回憶。!</p>
+                                <p class="right_content_introduce">在這個悠然的日子，希望能與有緣人共同擁有這個美好的回憶!</p>
                             </div>
                         </div>
                     </div>
@@ -245,25 +263,27 @@
                                 <p class="person_6 same_person_border">何妤真</p>
                             </div>
                             <div class="wang_bg same_title_bg">
-                                <a href="index_2_1.html" target="_blank" class="same_title"><p class="same_title">望鄉山步道</p></a>
+                                <a href="index_2_1.html" class="same_title">
+                                    <p class="same_title">望鄉山步道</p>
+                                </a>
                             </div>
                         </div>
                         <div class="wang_bottom_boder same_bottom_border">
                             <div class="left_content">
                                 <p class="first_title same_left_title">
-                                   集合地點:
+                                    集合地點:
                                     <span class="same_left_content">郡山入口</span>
                                 </p>
                                 <p class="same_left_title">
-                                   集合時間:
-                                    <span class="same_left_content">2020/09/25   06:00</span>
+                                    集合時間:
+                                    <span class="same_left_content">2020/09/25 06:00</span>
                                 </p>
                                 <p class="same_left_title">
-                                   參加人數:
+                                    參加人數:
                                     <span class="same_left_content">6人</span>
                                 </p>
                                 <p class="last_title same_left_title">
-                                   行程時間:
+                                    行程時間:
                                     <span class="same_left_content">2天</span>
                                 </p>
                             </div>
@@ -282,8 +302,12 @@
             <div class="middle_border">
                 <h3 class="gorup_popular">熱門榜</h3>
                 <div class="week_month_bg">
-                    <div class="left_week same_font"><h4 class="left_week same_font">周榜</h4></div>
-                    <div class="right_month same_font"><h4 class="right_month same_font">月榜</h4></div>
+                    <div class="left_week same_font">
+                        <h4 class="left_week same_font">周榜</h4>
+                    </div>
+                    <div class="right_month same_font">
+                        <h4 class="right_month same_font">月榜</h4>
+                    </div>
                     <div class="top_three_border">
                         <div class="no_1 same_no">
                             <h5 class="no_1 same_h5_border">NO.1</h5>
@@ -298,7 +322,7 @@
                             <p class="group_num">揪團人數:121人</p>
                         </div>
                         <div class="no_3 same_no">
-                            <h5 class="no_3 same_h5_border">NO.2</h5>
+                            <h5 class="no_3 same_h5_border">NO.3</h5>
                             <div class="person_no_3 person_no_border"></div>
                             <p class="no_name">徐庭亭</p>
                             <p class="group_num">揪團人數:119人</p>
@@ -311,8 +335,8 @@
                             <p class="no_four_nine_name">黃真真</p>
                             <div class="num_group_border">
                                 <p class="group_people">揪團人數</p>
-                                <p class="no_num">121人</p>
-                            </div> 
+                                <p class="no_num">112人</p>
+                            </div>
                         </div>
                         <div class="same_item_border">
                             <h5 class="no_same_type">5</h5>
@@ -321,7 +345,7 @@
                             <div class="num_group_border">
                                 <p class="group_people">揪團人數</p>
                                 <p class="no_num">102人</p>
-                            </div> 
+                            </div>
                         </div>
                         <div class="same_item_border">
                             <h5 class="no_same_type">6</h5>
@@ -329,8 +353,8 @@
                             <p class="no_four_nine_name">何妤真</p>
                             <div class="num_group_border">
                                 <p class="group_people">揪團人數</p>
-                                <p class="no_num">98</p>
-                            </div> 
+                                <p class="no_num">98人</p>
+                            </div>
                         </div>
                         <div class="same_item_border">
                             <h5 class="no_same_type">7</h5>
@@ -338,8 +362,8 @@
                             <p class="no_four_nine_name">田比筆</p>
                             <div class="num_group_border">
                                 <p class="group_people">揪團人數</p>
-                                <p class="no_num">95</p>
-                            </div> 
+                                <p class="no_num">95人</p>
+                            </div>
                         </div>
                         <div class="same_item_border">
                             <h5 class="no_same_type">8</h5>
@@ -347,8 +371,8 @@
                             <p class="no_four_nine_name">林維妮</p>
                             <div class="num_group_border">
                                 <p class="group_people">揪團人數</p>
-                                <p class="no_num">88</p>
-                            </div> 
+                                <p class="no_num">88人</p>
+                            </div>
                         </div>
                         <div class="last_nine same_item_border">
                             <h5 class="no_same_type">9</h5>
@@ -356,8 +380,8 @@
                             <p class="no_four_nine_name">陳佩琪</p>
                             <div class="num_group_border">
                                 <p class="group_people">揪團人數</p>
-                                <p class="no_num">85</p>
-                            </div> 
+                                <p class="no_num">85人</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -365,31 +389,34 @@
         </div>
     </main>
     <footer class="footer">
-        <a href="#header" class="go_top">
+        <a class="go_top">
             <span class="progress_bar"></span>
             <p class="go_top">回到頂點</p>
         </a>
         <p class="mail">信箱:tibame@gmail.com</p>
         <div class="fbtw_border">
             <a href="https://zh-tw.facebook.com/" target="_blank"><img class="fb" src="../HTML/index/fb_fb.png"></a>
-            <a href="https://twitter.com/?lang=zh-tw" target="_blank"><img class="tw" src="../HTML/index/twitter.png"></a>
+            <a href="https://twitter.com/?lang=zh-tw" target="_blank"><img class="tw"
+                    src="../HTML/index/twitter.png"></a>
         </div>
         <p class="copyright">Copyright © All rights reserved</p>
     </footer>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(function(){
-  
-          // 「觸發」按鈕點擊
-          $("button.burger_border").on("click", function(){
+        $(function () {
 
-            // move 樣式的切換(點擊一次加上 move 樣式，再點擊則移除)
-            $("ul.menu").toggleClass("move");
+            // 「觸發」按鈕點擊
+            $("button.burger_border").on("click", function () {
 
-          });
+                // move 樣式的切換(點擊一次加上 move 樣式，再點擊則移除)
+                $("ul.menu").toggleClass("move");
+
+            });
 
         });
     </script>
+    <script src="../JS/index_2.js"></script>
 </body>
+
 </html>
