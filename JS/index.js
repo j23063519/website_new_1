@@ -37,7 +37,7 @@ a_top.addEventListener("click", function () {
 });
 
 // 登入註冊
-$('a#loginLogout').on('click', function () {
+$('li#loginLogout').on('click', function () {
   $('div#loginlogout').toggleClass('actopa');
 });
 
