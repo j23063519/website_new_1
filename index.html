@@ -23,7 +23,7 @@
                         <li><a href="./HTML/index_2.html">山友揪團</a></li>
                         <li><a href="./HTML/index_2_2.html">建立揪團</a></li>
                         <li><a href="./HTML/index_3.html">登山須知</a></li>
-                        <li><a>登入/註冊</a></li>
+                        <li><a id="loginLogout">登入/註冊</a></li>
                     </ul>
                 </div>
                 <button type="button" class="burger_border">
@@ -36,6 +36,127 @@
                 loop muted>
                 <source src="./HTML/index/video.mp4" type="video/mp4">
             </video>
+            <div id="loginlogout" class="actopa">
+                <ul class="ulnav">
+                    <li onclick="showLogin()">登入</li>
+                    <li onclick="showSignup()">註冊</li>
+                    <li onclick="showForgotPassword()">忘記密碼</li>
+                    <li onclick="showSubscribe()">訂閱</li>
+                    <li onclick="showContactUs()">聯絡我們</li>
+                </ul>
+                <div class="wrapper">
+                    <div class="rec-prism">
+                        <div class="face face-top">
+                            <div class="content">
+                                <h2>Subscribe</h2>
+                                <small>Enter your email so we can send you the latest updates!</small>
+                                <form onsubmit="event.preventDefault()">
+                                    <div class="field-wrapper">
+                                        <input type="text" name="email" placeholder="email">
+                                        <label>e-mail</label>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <input type="submit" onclick="showThankYou()">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="face face-front">
+                            <div class="content">
+                                <h2>登入</h2>
+                                <form onsubmit="event.preventDefault()">
+                                    <div class="field-wrapper">
+                                        <input type="text" name="username" placeholder="username">
+                                        <label>帳號</label>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <input type="password" name="password" placeholder="password"
+                                            autocomplete="new-password">
+                                        <label>密碼</label>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <input type="submit" onclick="showThankYou()">
+                                    </div>
+                                    <div class="ulnav" id="jumpWrapper">
+                                        <li id="remar" class="psw" onclick="showForgotPassword()">忘記密碼</li>
+                                        <li id="remar" class="signup" onclick="showSignup()">還沒註冊?</li>
+                                        <li id="remar" class="signup" onclick="showContactUs()">聯絡我們</li>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="face face-back">
+                            <div class="content">
+                                <h2>Forgot your password?</h2>
+                                <small>Enter your email so we can send you a reset link for your password</small>
+                                <form onsubmit="event.preventDefault()">
+                                    <div class="field-wrapper">
+                                        <input type="text" name="email" placeholder="email">
+                                        <label>e-mail</label>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <input type="submit" onclick="showThankYou()">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="face face-right">
+                            <div class="content">
+                                <h2>Sign up</h2>
+                                <form onsubmit="event.preventDefault()">
+                                    <div class="field-wrapper">
+                                        <input type="text" name="email" placeholder="email">
+                                        <label>e-mail</label>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <input type="password" name="password" placeholder="password"
+                                            autocomplete="new-password">
+                                        <label>password</label>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <input type="password" name="password2" placeholder="password"
+                                            autocomplete="new-password">
+                                        <label>re-enter password</label>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <input type="submit" onclick="showThankYou()">
+                                    </div>
+                                    <span class="singin" onclick="showLogin()">Already a user? Sign in</span>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="face face-left">
+                            <div class="content">
+                                <h2>Contact us</h2>
+                                <form onsubmit="event.preventDefault()">
+                                    <div class="field-wrapper">
+                                        <input type="text" name="name" placeholder="name">
+                                        <label>Name</label>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <input type="text" name="email" placeholder="email">
+                                        <label>e-mail</label>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <textarea placeholder="your message"></textarea>
+                                        <label>your message</label>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <input type="submit" onclick="showThankYou()">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="face face-bottom">
+                            <div class="content">
+                                <div class="thank-you-msg">
+                                    Thank you!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
         <main class="main">
             <div class="about_border full_width">
