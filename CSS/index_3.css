@@ -46,6 +46,18 @@ div.test_white{
     background-color: white;
     border-radius: 50%;
     position: relative;
+    transition: 0.6s;
+}
+div.test_white.onw{
+    transform: rotateY(180deg);
+}
+@keyframes rr{
+    0%{
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
 }
 div.black_round{
     width: 400px;
@@ -58,6 +70,16 @@ div.black_round{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+div.black_round:hover{
+    animation-name: rr;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+div.black_round.onb{
+    transform: translate(-50%, -50%) rotateY(180deg);
 }
 p.knowledge_content{
     font-size: 16px;
@@ -66,6 +88,12 @@ p.knowledge_content{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+p.knowledge_content.on{
+    transform: translate(-50%, -50%) rotateY(-180deg);
+}
+p.knowledge_content.none{
+    display: none;
 }
 
 /*登山裝備*/
@@ -90,6 +118,7 @@ div.mountain_equipment_border{
     justify-content: space-between;
 }
 div.equipment_border{
+    position: relative;
     width: 300px;
     height: 400px;
     margin-bottom: 100px;
@@ -99,6 +128,16 @@ div.equipment_border{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+p.equipment_ans{
+    position: absolute;
+    top: 30%;
+    font-size: 20px;
+    padding: 0% 20%;
+    transition: 0.6s;
+}
+p.equipment_ans.pnone{
+    opacity: 0;
 }
 div.equipment_bg{
     width: 100%;
